@@ -1,4 +1,4 @@
-# Athens Map
+# Acropolist
 
 A phone-friendly map for my Athens trip: friends' recommendations in orange, general recommendations in blue.
 
