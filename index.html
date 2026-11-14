@@ -7,32 +7,57 @@
 <title>Acropolist</title>
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 <style>
-  :root { --friend: #e4572e; --general: #2e86de; }
   html, body { height: 100%; margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
   #map { position: absolute; inset: 0; }
-  #bar {
+  #top {
     position: absolute; z-index: 1000; top: 0; left: 0; right: 0;
     padding: calc(8px + env(safe-area-inset-top)) 8px 8px;
-    display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none;
     background: linear-gradient(rgba(255,255,255,.95), rgba(255,255,255,.75));
   }
+  #searchbox { position: relative; margin-bottom: 8px; }
+  #search {
+    width: 100%; box-sizing: border-box; border: 1px solid #ccc; border-radius: 999px;
+    padding: 10px 40px 10px 16px; font-size: 16px; background: #fff; color: #222; outline: none;
+    -webkit-appearance: none; appearance: none;
+  }
+  #search:focus { border-color: #333; }
+  #search::-webkit-search-cancel-button { display: none; }
+  #clear {
+    position: absolute; right: 4px; top: 50%; transform: translateY(-50%);
+    width: 36px; height: 36px; border: none; background: none; font-size: 20px; color: #777; cursor: pointer;
+    display: none;
+  }
+  #results {
+    display: none; margin: 0 0 8px; padding: 0; list-style: none; background: #fff;
+    border: 1px solid #ddd; border-radius: 12px; max-height: 45vh; overflow-y: auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,.2);
+  }
+  #results li { padding: 10px 12px; display: flex; align-items: center; gap: 10px; cursor: pointer; border-top: 1px solid #eee; }
+  #results li:first-child { border-top: none; }
+  #results li.none { color: #777; cursor: default; font-size: 14px; }
+  #results .name { font-size: 15px; color: #222; }
+  #results .sub { font-size: 12px; color: #777; }
+  #bar { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; }
   #bar::-webkit-scrollbar { display: none; }
   .chip {
     flex: none; border: 1px solid #ccc; background: #fff; color: #333;
     border-radius: 999px; padding: 7px 12px; font-size: 14px; cursor: pointer;
-    display: flex; align-items: center; gap: 6px; white-space: nowrap;
+    display: flex; align-items: center; gap: 7px; white-space: nowrap;
   }
   .chip.off { opacity: .45; }
   .chip.cat.on { background: #333; color: #fff; border-color: #333; }
-  .dot { width: 11px; height: 11px; border-radius: 50%; display: inline-block; }
+  .dot { flex: none; width: 11px; height: 11px; border-radius: 50%; display: inline-block; border: 1.5px solid #fff; box-shadow: 0 0 0 1px rgba(0,0,0,.25); }
+  .dot.friend, .pin.friend { box-shadow: 0 0 0 2.5px #111; }
+  .dot.plain { background: #bbb; }
   .sep { flex: none; width: 1px; background: #ccc; margin: 4px 2px; }
   .pin {
-    width: 22px; height: 22px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg);
-    border: 2px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,.45);
+    width: 16px; height: 16px; border-radius: 50%;
+    border: 2px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,.5);
   }
+  .pin.friend { box-shadow: 0 0 0 3px #111, 0 1px 5px 3px rgba(0,0,0,.4); }
   .popup h3 { margin: 0 0 4px; font-size: 16px; }
   .popup .meta { font-size: 12px; color: #666; margin-bottom: 6px; }
-  .popup .by { font-weight: 600; color: var(--friend); }
+  .popup .by { font-weight: 600; color: #111; }
   .popup p { margin: 0 0 8px; font-size: 14px; }
   .popup a.go {
     display: inline-block; background: #1a73e8; color: #fff; text-decoration: none;
@@ -47,12 +72,29 @@
 </head>
 <body>
 <div id="map"></div>
-<div id="bar"></div>
+<div id="top">
+  <div id="searchbox">
+    <input id="search" type="search" placeholder="Search places…" autocomplete="off" autocorrect="off" spellcheck="false" aria-label="Search places">
+    <button id="clear" aria-label="Clear search">×</button>
+  </div>
+  <ul id="results"></ul>
+  <div id="bar"></div>
+</div>
 <button id="locate" title="Where am I?" aria-label="Show my location">◎</button>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-const COLORS = { friend: '#e4572e', general: '#2e86de' };
+// One colour per category; friends' picks get a black ring around the dot.
+const CAT_COLORS = {
+  'Food': '#e4572e',
+  'Bars': '#8e44ad',
+  'Cafes & Sweets': '#e84393',
+  'Museums': '#2e86de',
+  'Sights': '#f2a900',
+  'Views': '#00a6a6',
+  'Parks': '#2e9e4f'
+};
+const color = cat => CAT_COLORS[cat] || '#666';
 const LABELS = { friend: 'Friends', general: 'General' };
 
 const map = L.map('map', { zoomControl: false }).setView([37.9755, 23.7300], 14);
@@ -62,12 +104,13 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
-const icon = src => L.divIcon({
-  className: '', iconSize: [22, 22], iconAnchor: [11, 22], popupAnchor: [0, -22],
-  html: `<div class="pin" style="background:${COLORS[src]}"></div>`
+const fold = s => String(s ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+const icon = p => L.divIcon({
+  className: '', iconSize: [20, 20], iconAnchor: [10, 10], popupAnchor: [0, -12],
+  html: `<div class="pin ${p.source === 'friend' ? 'friend' : ''}" style="background:${color(p.category)}"></div>`
 });
 
-const state = { sources: new Set(['friend', 'general']), category: null };
+const state = { sources: new Set(['friend', 'general']), category: null, query: '' };
 let markers = [];
 
 function popupHtml(p) {
@@ -83,10 +126,14 @@ function popupHtml(p) {
   </div>`;
 }
 
+// A search looks through every place, whatever chips are selected.
+const matches = m => state.query
+  ? m.text.includes(state.query)
+  : state.sources.has(m.place.source) && (!state.category || m.place.category === state.category);
+
 function applyFilters() {
   for (const m of markers) {
-    const show = state.sources.has(m.place.source) && (!state.category || m.place.category === state.category);
-    if (show) m.addTo(map); else m.remove();
+    if (matches(m)) m.addTo(map); else m.remove();
   }
 }
 
@@ -95,7 +142,7 @@ function buildBar(places) {
   for (const src of ['friend', 'general']) {
     const b = document.createElement('button');
     b.className = 'chip';
-    b.innerHTML = `<span class="dot" style="background:${COLORS[src]}"></span>${LABELS[src]}`;
+    b.innerHTML = `<span class="dot plain ${src === 'friend' ? 'friend' : ''}"></span>${LABELS[src]}`;
     b.onclick = () => {
       state.sources.has(src) ? state.sources.delete(src) : state.sources.add(src);
       b.classList.toggle('off', !state.sources.has(src));
@@ -104,15 +151,18 @@ function buildBar(places) {
     bar.appendChild(b);
   }
   bar.appendChild(Object.assign(document.createElement('div'), { className: 'sep' }));
-  const cats = [...new Set(places.map(p => p.category))].sort();
+  const known = Object.keys(CAT_COLORS);
+  const cats = [...new Set(places.map(p => p.category))]
+    .sort((a, b) => (known.indexOf(a) + 1 || 99) - (known.indexOf(b) + 1 || 99) || a.localeCompare(b));
   const chips = [];
   for (const cat of cats) {
     const b = document.createElement('button');
     b.className = 'chip cat';
-    b.textContent = cat;
+    b.dataset.cat = cat;
+    b.innerHTML = `<span class="dot" style="background:${color(cat)}"></span>${esc(cat)}`;
     b.onclick = () => {
       state.category = state.category === cat ? null : cat;
-      chips.forEach(c => c.classList.toggle('on', c.textContent === state.category));
+      chips.forEach(c => c.classList.toggle('on', c.dataset.cat === state.category));
       applyFilters();
     };
     chips.push(b);
@@ -120,11 +170,52 @@ function buildBar(places) {
   }
 }
 
+const search = document.getElementById('search');
+const clearBtn = document.getElementById('clear');
+const results = document.getElementById('results');
+
+function showResults() {
+  results.innerHTML = '';
+  if (!state.query) { results.style.display = 'none'; return; }
+  const hits = markers.filter(matches)
+    .sort((a, b) => (b.place.source === 'friend') - (a.place.source === 'friend') || a.place.name.localeCompare(b.place.name));
+  if (!hits.length) {
+    results.innerHTML = '<li class="none">No places found</li>';
+  }
+  for (const m of hits) {
+    const p = m.place;
+    const li = document.createElement('li');
+    li.innerHTML = `<span class="dot ${p.source === 'friend' ? 'friend' : ''}" style="background:${color(p.category)}"></span>
+      <div><div class="name">${esc(p.name)}</div>
+      <div class="sub">${esc(p.category)}${p.source === 'friend' ? ' · ' + (p.by ? esc(p.by) : "Friend's pick") : ''}</div></div>`;
+    li.onclick = () => {
+      results.style.display = 'none';
+      search.blur();
+      map.setView(m.getLatLng(), Math.max(map.getZoom(), 16));
+      m.openPopup();
+    };
+    results.appendChild(li);
+  }
+  results.style.display = 'block';
+}
+
+function onSearch() {
+  state.query = fold(search.value.trim());
+  clearBtn.style.display = search.value ? 'block' : 'none';
+  applyFilters();
+  showResults();
+}
+search.addEventListener('input', onSearch);
+search.addEventListener('focus', showResults);
+clearBtn.onclick = () => { search.value = ''; onSearch(); };
+map.on('click', () => { results.style.display = 'none'; search.blur(); });
+
 fetch('places.json').then(r => r.json()).then(places => {
   markers = places.map(p => {
-    const m = L.marker([p.lat, p.lng], { icon: icon(p.source), zIndexOffset: p.source === 'friend' ? 1000 : 0 })
+    const m = L.marker([p.lat, p.lng], { icon: icon(p), zIndexOffset: p.source === 'friend' ? 1000 : 0 })
       .bindPopup(popupHtml(p));
     m.place = p;
+    m.text = fold([p.name, p.category, p.by, p.note, p.source === 'friend' ? 'friend' : ''].join(' '));
     return m;
   });
   buildBar(places);
