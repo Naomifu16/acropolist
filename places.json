@@ -1,0 +1,196 @@
+[
+ {
+  "name": "Tavern Klimataria",
+  "source": "friend",
+  "by": "",
+  "category": "Food",
+  "note": "",
+  "lat": 37.98058,
+  "lng": 23.72453,
+  "url": "https://maps.app.goo.gl/YkH3mcaTLj1wJCB29"
+ },
+ {
+  "name": "Acropolis & Parthenon",
+  "source": "general",
+  "category": "Sights",
+  "note": "Go at opening time or late afternoon to dodge crowds and heat.",
+  "lat": 37.9715,
+  "lng": 23.72662
+ },
+ {
+  "name": "Acropolis Museum",
+  "source": "general",
+  "category": "Museums",
+  "note": "Glass floors over excavations; cafe terrace faces the Parthenon.",
+  "lat": 37.96853,
+  "lng": 23.72847
+ },
+ {
+  "name": "Ancient Agora & Temple of Hephaestus",
+  "source": "general",
+  "category": "Sights",
+  "note": "Best-preserved Greek temple; quieter than the Acropolis.",
+  "lat": 37.9756,
+  "lng": 23.72141
+ },
+ {
+  "name": "Anafiotika",
+  "source": "general",
+  "category": "Neighborhoods",
+  "note": "Tiny whitewashed island-style lanes under the Acropolis.",
+  "lat": 37.97241,
+  "lng": 23.72813
+ },
+ {
+  "name": "Monastiraki Square & Flea Market",
+  "source": "general",
+  "category": "Shopping",
+  "note": "Flea market streets; busiest on Sundays.",
+  "lat": 37.97636,
+  "lng": 23.72595
+ },
+ {
+  "name": "National Archaeological Museum",
+  "source": "general",
+  "category": "Museums",
+  "note": "Mask of Agamemnon and the Antikythera mechanism.",
+  "lat": 37.98901,
+  "lng": 23.73296
+ },
+ {
+  "name": "Lycabettus Hill",
+  "source": "general",
+  "category": "Views",
+  "note": "Highest point in the centre; go for sunset (funicular or walk).",
+  "lat": 37.9819,
+  "lng": 23.7433
+ },
+ {
+  "name": "Temple of Olympian Zeus",
+  "source": "general",
+  "category": "Sights",
+  "note": "Huge columns next to Hadrian's Arch.",
+  "lat": 37.96944,
+  "lng": 23.7331
+ },
+ {
+  "name": "Panathenaic Stadium",
+  "source": "general",
+  "category": "Sights",
+  "note": "All-marble stadium of the first modern Olympics.",
+  "lat": 37.96844,
+  "lng": 23.74095
+ },
+ {
+  "name": "Philopappos Hill",
+  "source": "general",
+  "category": "Views",
+  "note": "Free, shaded walk with the best Acropolis view.",
+  "lat": 37.96736,
+  "lng": 23.72137
+ },
+ {
+  "name": "Areopagus Hill",
+  "source": "general",
+  "category": "Views",
+  "note": "Rocky outcrop by the Acropolis entrance; sunset spot.",
+  "lat": 37.97241,
+  "lng": 23.7231
+ },
+ {
+  "name": "Varvakios Central Market",
+  "source": "general",
+  "category": "Food",
+  "note": "Meat, fish and spice market; go in the morning.",
+  "lat": 37.98037,
+  "lng": 23.72762
+ },
+ {
+  "name": "National Garden",
+  "source": "general",
+  "category": "Parks",
+  "note": "Shady escape behind Parliament.",
+  "lat": 37.97358,
+  "lng": 23.73779
+ },
+ {
+  "name": "Stavros Niarchos Cultural Center",
+  "source": "general",
+  "category": "Sights",
+  "note": "Renzo Piano building, park and sea views.",
+  "lat": 37.94104,
+  "lng": 23.69331
+ },
+ {
+  "name": "Museum of Cycladic Art",
+  "source": "general",
+  "category": "Museums",
+  "note": "Minimalist Cycladic figurines.",
+  "lat": 37.9757,
+  "lng": 23.74231
+ },
+ {
+  "name": "Psyrri",
+  "source": "general",
+  "category": "Neighborhoods",
+  "note": "Street art, tavernas and bars; lively at night.",
+  "lat": 37.97842,
+  "lng": 23.72494
+ },
+ {
+  "name": "Kerameikos",
+  "source": "general",
+  "category": "Sights",
+  "note": "Ancient cemetery; calm and rarely crowded.",
+  "lat": 37.97863,
+  "lng": 23.71822
+ },
+ {
+  "name": "Roman Agora & Tower of the Winds",
+  "source": "general",
+  "category": "Sights",
+  "note": "Small site, included in the combined ticket.",
+  "lat": 37.9742,
+  "lng": 23.72703
+ },
+ {
+  "name": "Plaka",
+  "source": "general",
+  "category": "Neighborhoods",
+  "note": "Old town lanes; touristy but lovely early morning.",
+  "lat": 37.97285,
+  "lng": 23.73006
+ },
+ {
+  "name": "Koukaki",
+  "source": "general",
+  "category": "Neighborhoods",
+  "note": "Local cafes and bars south of the Acropolis.",
+  "lat": 37.96346,
+  "lng": 23.72202
+ },
+ {
+  "name": "Syntagma Square – Changing of the Guard",
+  "source": "general",
+  "category": "Sights",
+  "note": "Evzones change every hour; big ceremony Sundays 11:00.",
+  "lat": 37.9753,
+  "lng": 23.7357
+ },
+ {
+  "name": "Benaki Museum",
+  "source": "general",
+  "category": "Museums",
+  "note": "Greek culture from antiquity to today; rooftop cafe.",
+  "lat": 37.9759,
+  "lng": 23.7404
+ },
+ {
+  "name": "Kolonaki",
+  "source": "general",
+  "category": "Neighborhoods",
+  "note": "Upscale shopping, galleries and cafes.",
+  "lat": 37.9769,
+  "lng": 23.7424
+ }
+]
