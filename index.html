@@ -77,7 +77,7 @@ function popupHtml(p) {
     : '';
   return `<div class="popup">
     <h3>${esc(p.name)}</h3>
-    <div class="meta">${by}${esc(p.category)}</div>
+    <div class="meta">${by}${esc(p.category)}${p.rating ? ` · ★ ${p.rating} (${p.reviews.toLocaleString()} Google reviews)` : ''}</div>
     ${p.note ? `<p>${esc(p.note)}</p>` : ''}
     <a class="go" href="${esc(url)}" target="_blank" rel="noopener">Open in Google Maps</a>
   </div>`;

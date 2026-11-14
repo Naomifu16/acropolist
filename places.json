@@ -10,187 +10,417 @@
   "url": "https://maps.app.goo.gl/YkH3mcaTLj1wJCB29"
  },
  {
-  "name": "Acropolis & Parthenon",
+  "name": "Acropolis of Athens",
   "source": "general",
   "category": "Sights",
-  "note": "Go at opening time or late afternoon to dodge crowds and heat.",
-  "lat": 37.9715,
-  "lng": 23.72662
- },
- {
-  "name": "Acropolis Museum",
-  "source": "general",
-  "category": "Museums",
-  "note": "Glass floors over excavations; cafe terrace faces the Parthenon.",
-  "lat": 37.96853,
-  "lng": 23.72847
- },
- {
-  "name": "Ancient Agora & Temple of Hephaestus",
-  "source": "general",
-  "category": "Sights",
-  "note": "Best-preserved Greek temple; quieter than the Acropolis.",
-  "lat": 37.9756,
-  "lng": 23.72141
- },
- {
-  "name": "Anafiotika",
-  "source": "general",
-  "category": "Neighborhoods",
-  "note": "Tiny whitewashed island-style lanes under the Acropolis.",
-  "lat": 37.97241,
-  "lng": 23.72813
- },
- {
-  "name": "Monastiraki Square & Flea Market",
-  "source": "general",
-  "category": "Shopping",
-  "note": "Flea market streets; busiest on Sundays.",
-  "lat": 37.97636,
-  "lng": 23.72595
- },
- {
-  "name": "National Archaeological Museum",
-  "source": "general",
-  "category": "Museums",
-  "note": "Mask of Agamemnon and the Antikythera mechanism.",
-  "lat": 37.98901,
-  "lng": 23.73296
- },
- {
-  "name": "Lycabettus Hill",
-  "source": "general",
-  "category": "Views",
-  "note": "Highest point in the centre; go for sunset (funicular or walk).",
-  "lat": 37.9819,
-  "lng": 23.7433
- },
- {
-  "name": "Temple of Olympian Zeus",
-  "source": "general",
-  "category": "Sights",
-  "note": "Huge columns next to Hadrian's Arch.",
-  "lat": 37.96944,
-  "lng": 23.7331
+  "rating": 4.8,
+  "reviews": 149913,
+  "lat": 37.97153,
+  "lng": 23.72575
  },
  {
   "name": "Panathenaic Stadium",
   "source": "general",
   "category": "Sights",
-  "note": "All-marble stadium of the first modern Olympics.",
-  "lat": 37.96844,
-  "lng": 23.74095
+  "rating": 4.7,
+  "reviews": 47198,
+  "lat": 37.96833,
+  "lng": 23.74111
+ },
+ {
+  "name": "Ancient Agora of Athens",
+  "source": "general",
+  "category": "Sights",
+  "rating": 4.7,
+  "reviews": 41240,
+  "lat": 37.9749,
+  "lng": 23.72209
+ },
+ {
+  "name": "Monastiraki Square",
+  "source": "general",
+  "category": "Sights",
+  "rating": 4.5,
+  "reviews": 29151,
+  "lat": 37.97641,
+  "lng": 23.72589
+ },
+ {
+  "name": "Roman Agora",
+  "source": "general",
+  "category": "Sights",
+  "rating": 4.5,
+  "reviews": 15291,
+  "lat": 37.97425,
+  "lng": 23.7261
+ },
+ {
+  "name": "Temple of Hephaestus",
+  "source": "general",
+  "category": "Sights",
+  "rating": 4.8,
+  "reviews": 13256,
+  "lat": 37.97559,
+  "lng": 23.72145
+ },
+ {
+  "name": "Metropolitan Cathedral of Athens",
+  "source": "general",
+  "category": "Sights",
+  "rating": 4.7,
+  "reviews": 10372,
+  "lat": 37.97538,
+  "lng": 23.72985
+ },
+ {
+  "name": "Technopolis City of Athens",
+  "source": "general",
+  "category": "Sights",
+  "rating": 4.5,
+  "reviews": 18906,
+  "lat": 37.97823,
+  "lng": 23.71365
+ },
+ {
+  "name": "Lycabettus Hill",
+  "source": "general",
+  "category": "Views",
+  "rating": 4.7,
+  "reviews": 26103,
+  "lat": 37.98188,
+  "lng": 23.74312
  },
  {
   "name": "Philopappos Hill",
   "source": "general",
   "category": "Views",
-  "note": "Free, shaded walk with the best Acropolis view.",
-  "lat": 37.96736,
-  "lng": 23.72137
+  "rating": 4.8,
+  "reviews": 22827,
+  "lat": 37.96712,
+  "lng": 23.72158
  },
  {
-  "name": "Areopagus Hill",
+  "name": "Areopagus (Mars Hill)",
   "source": "general",
   "category": "Views",
-  "note": "Rocky outcrop by the Acropolis entrance; sunset spot.",
-  "lat": 37.97241,
-  "lng": 23.7231
+  "rating": 4.8,
+  "reviews": 5800,
+  "lat": 37.97237,
+  "lng": 23.72323
  },
  {
-  "name": "Varvakios Central Market",
-  "source": "general",
-  "category": "Food",
-  "note": "Meat, fish and spice market; go in the morning.",
-  "lat": 37.98037,
-  "lng": 23.72762
- },
- {
-  "name": "National Garden",
+  "name": "Athens National Garden",
   "source": "general",
   "category": "Parks",
-  "note": "Shady escape behind Parliament.",
-  "lat": 37.97358,
-  "lng": 23.73779
+  "rating": 4.6,
+  "reviews": 44649,
+  "lat": 37.97259,
+  "lng": 23.73743
  },
  {
-  "name": "Stavros Niarchos Cultural Center",
+  "name": "Stavros Niarchos Park",
   "source": "general",
-  "category": "Sights",
-  "note": "Renzo Piano building, park and sea views.",
-  "lat": 37.94104,
-  "lng": 23.69331
+  "category": "Parks",
+  "rating": 4.8,
+  "reviews": 46100,
+  "lat": 37.9422,
+  "lng": 23.69346
  },
  {
-  "name": "Museum of Cycladic Art",
+  "name": "Acropolis Museum",
   "source": "general",
   "category": "Museums",
-  "note": "Minimalist Cycladic figurines.",
-  "lat": 37.9757,
-  "lng": 23.74231
+  "rating": 4.7,
+  "reviews": 86809,
+  "lat": 37.96845,
+  "lng": 23.72852
  },
  {
-  "name": "Psyrri",
+  "name": "National Archaeological Museum",
   "source": "general",
-  "category": "Neighborhoods",
-  "note": "Street art, tavernas and bars; lively at night.",
-  "lat": 37.97842,
-  "lng": 23.72494
- },
- {
-  "name": "Kerameikos",
-  "source": "general",
-  "category": "Sights",
-  "note": "Ancient cemetery; calm and rarely crowded.",
-  "lat": 37.97863,
-  "lng": 23.71822
- },
- {
-  "name": "Roman Agora & Tower of the Winds",
-  "source": "general",
-  "category": "Sights",
-  "note": "Small site, included in the combined ticket.",
-  "lat": 37.9742,
-  "lng": 23.72703
- },
- {
-  "name": "Plaka",
-  "source": "general",
-  "category": "Neighborhoods",
-  "note": "Old town lanes; touristy but lovely early morning.",
-  "lat": 37.97285,
-  "lng": 23.73006
- },
- {
-  "name": "Koukaki",
-  "source": "general",
-  "category": "Neighborhoods",
-  "note": "Local cafes and bars south of the Acropolis.",
-  "lat": 37.96346,
-  "lng": 23.72202
- },
- {
-  "name": "Syntagma Square – Changing of the Guard",
-  "source": "general",
-  "category": "Sights",
-  "note": "Evzones change every hour; big ceremony Sundays 11:00.",
-  "lat": 37.9753,
-  "lng": 23.7357
+  "category": "Museums",
+  "rating": 4.6,
+  "reviews": 40023,
+  "lat": 37.98902,
+  "lng": 23.73276
  },
  {
   "name": "Benaki Museum",
   "source": "general",
   "category": "Museums",
-  "note": "Greek culture from antiquity to today; rooftop cafe.",
-  "lat": 37.9759,
-  "lng": 23.7404
+  "rating": 4.7,
+  "reviews": 8161,
+  "lat": 37.97595,
+  "lng": 23.74045
  },
  {
-  "name": "Kolonaki",
+  "name": "Basil & Elise Goulandris Foundation",
   "source": "general",
-  "category": "Neighborhoods",
-  "note": "Upscale shopping, galleries and cafes.",
-  "lat": 37.9769,
-  "lng": 23.7424
+  "category": "Museums",
+  "rating": 4.8,
+  "reviews": 6157,
+  "lat": 37.96969,
+  "lng": 23.74284
+ },
+ {
+  "name": "Museum of Cycladic Art",
+  "source": "general",
+  "category": "Museums",
+  "rating": 4.7,
+  "reviews": 5146,
+  "lat": 37.97567,
+  "lng": 23.74282
+ },
+ {
+  "name": "Byzantine & Christian Museum",
+  "source": "general",
+  "category": "Museums",
+  "rating": 4.6,
+  "reviews": 5142,
+  "lat": 37.97531,
+  "lng": 23.74463
+ },
+ {
+  "name": "National Historical Museum",
+  "source": "general",
+  "category": "Museums",
+  "rating": 4.7,
+  "reviews": 4939,
+  "lat": 37.97788,
+  "lng": 23.73288
+ },
+ {
+  "name": "War Museum Athens",
+  "source": "general",
+  "category": "Museums",
+  "rating": 4.7,
+  "reviews": 4498,
+  "lat": 37.97546,
+  "lng": 23.74555
+ },
+ {
+  "name": "Kotsanas Museum of Ancient Greek Technology",
+  "source": "general",
+  "category": "Museums",
+  "rating": 4.8,
+  "reviews": 4320,
+  "lat": 37.97769,
+  "lng": 23.73819
+ },
+ {
+  "name": "Karamanlidika",
+  "source": "general",
+  "category": "Food",
+  "rating": 4.7,
+  "reviews": 14515,
+  "lat": 37.98024,
+  "lng": 23.72564
+ },
+ {
+  "name": "Maiandros Restaurant",
+  "source": "general",
+  "category": "Food",
+  "rating": 4.6,
+  "reviews": 10706,
+  "lat": 37.97568,
+  "lng": 23.72535
+ },
+ {
+  "name": "Atitamos",
+  "source": "general",
+  "category": "Food",
+  "rating": 4.7,
+  "reviews": 8614,
+  "lat": 37.98611,
+  "lng": 23.73237
+ },
+ {
+  "name": "Efcharis Restaurant",
+  "source": "general",
+  "category": "Food",
+  "rating": 4.6,
+  "reviews": 8039,
+  "lat": 37.97567,
+  "lng": 23.7255
+ },
+ {
+  "name": "Liondi Traditional Greek Restaurant",
+  "source": "general",
+  "category": "Food",
+  "rating": 4.7,
+  "reviews": 7317,
+  "lat": 37.96821,
+  "lng": 23.72948
+ },
+ {
+  "name": "Aspro Alogo",
+  "source": "general",
+  "category": "Food",
+  "rating": 4.7,
+  "reviews": 7211,
+  "lat": 37.97484,
+  "lng": 23.73128
+ },
+ {
+  "name": "Mironi Restaurant",
+  "source": "general",
+  "category": "Food",
+  "rating": 4.8,
+  "reviews": 6500,
+  "lat": 37.98465,
+  "lng": 23.72141
+ },
+ {
+  "name": "Arcadia Restaurant",
+  "source": "general",
+  "category": "Food",
+  "rating": 4.7,
+  "reviews": 6461,
+  "lat": 37.96817,
+  "lng": 23.72946
+ },
+ {
+  "name": "Rhino Vegan Beat",
+  "source": "general",
+  "category": "Food",
+  "rating": 4.8,
+  "reviews": 6409,
+  "lat": 37.97687,
+  "lng": 23.72983
+ },
+ {
+  "name": "Feyrouz",
+  "source": "general",
+  "category": "Food",
+  "rating": 4.8,
+  "reviews": 6132,
+  "lat": 37.97808,
+  "lng": 23.72765
+ },
+ {
+  "name": "Bandiera",
+  "source": "general",
+  "category": "Food",
+  "rating": 4.8,
+  "reviews": 5776,
+  "lat": 37.97831,
+  "lng": 23.72385
+ },
+ {
+  "name": "Yard Restaurant",
+  "source": "general",
+  "category": "Food",
+  "rating": 4.8,
+  "reviews": 5772,
+  "lat": 37.96858,
+  "lng": 23.72963
+ },
+ {
+  "name": "Couleur Locale",
+  "source": "general",
+  "category": "Bars",
+  "rating": 4.5,
+  "reviews": 11495,
+  "lat": 37.97666,
+  "lng": 23.7245
+ },
+ {
+  "name": "Upupa Epops",
+  "source": "general",
+  "category": "Bars",
+  "rating": 4.6,
+  "reviews": 8406,
+  "lat": 37.97421,
+  "lng": 23.71032
+ },
+ {
+  "name": "Attic Urban Rooftop",
+  "source": "general",
+  "category": "Bars",
+  "rating": 4.5,
+  "reviews": 7920,
+  "lat": 37.97695,
+  "lng": 23.72543
+ },
+ {
+  "name": "GB Roof Garden",
+  "source": "general",
+  "category": "Bars",
+  "rating": 4.7,
+  "reviews": 2741,
+  "lat": 37.97623,
+  "lng": 23.73551
+ },
+ {
+  "name": "MoMix Bar Athens",
+  "source": "general",
+  "category": "Bars",
+  "rating": 4.6,
+  "reviews": 2171,
+  "lat": 37.97873,
+  "lng": 23.7239
+ },
+ {
+  "name": "BOO! Athens",
+  "source": "general",
+  "category": "Bars",
+  "rating": 4.6,
+  "reviews": 2007,
+  "lat": 37.97843,
+  "lng": 23.72254
+ },
+ {
+  "name": "Choureal - Choux & Profiterole",
+  "source": "general",
+  "category": "Cafes & Sweets",
+  "rating": 4.7,
+  "reviews": 6068,
+  "lat": 37.97617,
+  "lng": 23.7318
+ },
+ {
+  "name": "Koukouvaya Desserts",
+  "source": "general",
+  "category": "Cafes & Sweets",
+  "rating": 4.8,
+  "reviews": 5144,
+  "lat": 37.97736,
+  "lng": 23.72841
+ },
+ {
+  "name": "Alchemist Cafe Patisserie",
+  "source": "general",
+  "category": "Cafes & Sweets",
+  "rating": 4.9,
+  "reviews": 3582,
+  "lat": 37.96783,
+  "lng": 23.72832
+ },
+ {
+  "name": "Zoubourlou Psyrri",
+  "source": "general",
+  "category": "Cafes & Sweets",
+  "rating": 4.5,
+  "reviews": 3097,
+  "lat": 37.97853,
+  "lng": 23.7251
+ },
+ {
+  "name": "72H Artisanal Bakery",
+  "source": "general",
+  "category": "Cafes & Sweets",
+  "rating": 4.5,
+  "reviews": 2081,
+  "lat": 37.97529,
+  "lng": 23.73125
+ },
+ {
+  "name": "Takis Bakery",
+  "source": "general",
+  "category": "Cafes & Sweets",
+  "rating": 4.7,
+  "reviews": 1840,
+  "lat": 37.96769,
+  "lng": 23.72679
  }
 ]

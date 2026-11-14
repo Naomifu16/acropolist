@@ -1,6 +1,6 @@
 # Acropolist
 
-A phone-friendly map for my Athens trip: friends' recommendations in orange, general recommendations in blue.
+A phone-friendly map for my Athens trip: friends' recommendations in orange, general recommendations in blue (Google Maps rating 4.5+ with 1,000+ reviews, checked 14 Nov 2026).
 
 - `index.html` – the app (Leaflet, no build step)
 - `places.json` – all the pins
