@@ -59,6 +59,32 @@
   .popup .meta { font-size: 12px; color: #666; margin-bottom: 6px; }
   .popup .by { font-weight: 600; color: #111; }
   .popup p { margin: 0 0 8px; font-size: 14px; }
+  .popup p.story { line-height: 1.4; color: #333; }
+  #guideBtn {
+    position: absolute; z-index: 1000; right: 12px; bottom: calc(86px + env(safe-area-inset-bottom));
+    width: 46px; height: 46px; border-radius: 50%; border: none; background: #fff; color: #111;
+    box-shadow: 0 1px 5px rgba(0,0,0,.4); font: italic 700 22px Georgia, serif; cursor: pointer;
+  }
+  #guide {
+    display: none; position: absolute; z-index: 2000; inset: 0; background: #fff; color: #222;
+    overflow-y: auto; -webkit-overflow-scrolling: touch;
+    padding: calc(16px + env(safe-area-inset-top)) 18px calc(32px + env(safe-area-inset-bottom));
+  }
+  #guide.open { display: block; }
+  #guide .inner { max-width: 640px; margin: 0 auto; }
+  #guide h2 { margin: 0 44px 4px 0; font-size: 24px; }
+  #guide h3 { margin: 26px 0 8px; font-size: 17px; }
+  #guide p, #guide li { font-size: 15px; line-height: 1.5; }
+  #guide p { margin: 0 0 10px; }
+  #guide ul { margin: 0; padding-left: 20px; }
+  #guide li { margin-bottom: 8px; }
+  #guide .when { font-weight: 700; white-space: nowrap; }
+  #guide .lead { color: #555; }
+  #guideClose {
+    position: fixed; z-index: 2001; top: calc(10px + env(safe-area-inset-top)); right: 12px;
+    width: 40px; height: 40px; border-radius: 50%; border: none; background: #eee; color: #333;
+    font-size: 22px; cursor: pointer;
+  }
   .popup a.go {
     display: inline-block; background: #1a73e8; color: #fff; text-decoration: none;
     padding: 7px 12px; border-radius: 6px; font-size: 14px;
@@ -79,6 +105,54 @@
   </div>
   <ul id="results"></ul>
   <div id="bar"></div>
+</div>
+<button id="guideBtn" title="About Athens" aria-label="About Athens">i</button>
+<div id="guide" role="dialog" aria-label="About Athens">
+  <button id="guideClose" aria-label="Close">×</button>
+  <div class="inner">
+    <h2>Athens in brief</h2>
+    <p class="lead">A short history, a few stories and things worth knowing. Tap any sight or museum on the map for its own story.</p>
+
+    <h3>How it got its name</h3>
+    <p>Myth says Athena and Poseidon competed to be the city's patron. Poseidon struck the Acropolis rock and a salt-water spring appeared; Athena planted an olive tree. The citizens chose the olive, and the city took her name. An olive tree still grows on the spot, beside the Erechtheion.</p>
+
+    <h3>3,000 years in ten dates</h3>
+    <ul>
+      <li><span class="when">508 BC</span> – Cleisthenes' reforms give ordinary citizens the vote: the first democracy.</li>
+      <li><span class="when">480 BC</span> – The Persians burn the Acropolis. Weeks later the Athenian fleet destroys theirs at Salamis.</li>
+      <li><span class="when">447–404 BC</span> – The golden age under Pericles: the Parthenon, Socrates, Sophocles. It ends when Athens loses a long war to Sparta.</li>
+      <li><span class="when">86 BC</span> – Rome sacks the city, then falls in love with it. Emperor Hadrian later builds a library, an arch and finishes the Temple of Olympian Zeus.</li>
+      <li><span class="when">529 AD</span> – Emperor Justinian closes the philosophy schools. Athens becomes a quiet Byzantine town.</li>
+      <li><span class="when">1458</span> – The Ottomans take Athens and hold it for almost 400 years.</li>
+      <li><span class="when">1834</span> – After the War of Independence (1821), Athens becomes capital of Greece. It is then a town of only a few thousand people living around the Acropolis.</li>
+      <li><span class="when">1896</span> – The first modern Olympic Games.</li>
+      <li><span class="when">1922–23</span> – Hundreds of thousands of Greek refugees arrive from Asia Minor, transforming the city and bringing rebetiko music with them.</li>
+      <li><span class="when">1973–74</span> – Students at the Polytechnic rise against the military dictatorship on 17 November 1973; democracy returns the following year.</li>
+    </ul>
+
+    <h3>Stories to tell at dinner</h3>
+    <ul>
+      <li><b>The guards at Syntagma.</b> The Evzones outside Parliament change every hour, with the full ceremony on Sundays at 11:00. Their kilt is said to have 400 pleats, one for each year of Ottoman rule, and each shoe weighs over a kilo.</li>
+      <li><b>The marathon.</b> The race is named after the messenger who, in legend, ran from the battlefield of Marathon to Athens in 490 BC, announced the victory and dropped dead. The Athens Marathon still follows that route and finishes in the Panathenaic Stadium.</li>
+      <li><b>Socrates' last day.</b> Sentenced to death in 399 BC for "corrupting the youth", he refused his friends' offer to help him escape and drank hemlock, still debating philosophy.</li>
+      <li><b>The missing marbles.</b> Around 1801–1812 Lord Elgin removed about half of the Parthenon's surviving sculptures and sold them to the British Museum. Greece has asked for them back ever since.</li>
+      <li><b>Metro museums.</b> Digging the metro before the 2004 Olympics turned up tens of thousands of ancient finds. Syntagma and Monastiraki stations display some of them for the price of a ticket.</li>
+    </ul>
+
+    <h3>Good to know</h3>
+    <ul>
+      <li><b>17 November</b> is the anniversary of the Polytechnic uprising: expect a large march in the centre, closed metro stations and some closed sights that afternoon.</li>
+      <li>The Acropolis uses timed tickets. Book online and go at opening time or late afternoon.</li>
+      <li>Ancient marble is polished and slippery, even when dry. Wear shoes with grip.</li>
+      <li>Toilet paper goes in the bin, not the toilet. The pipes are narrow.</li>
+      <li>Tap water in Athens is fine to drink.</li>
+      <li>Athenians eat late: restaurants fill up from 21:00.</li>
+      <li>"Yes" is <i>ne</i> and "no" is <i>ochi</i>. Thank you is <i>efcharisto</i>.</li>
+      <li>Don't hold up an open palm towards someone; it is a rude gesture here.</li>
+      <li>Watch your pockets on the metro and around Monastiraki.</li>
+      <li>Emergency number: 112.</li>
+    </ul>
+  </div>
 </div>
 <button id="locate" title="Where am I?" aria-label="Show my location">◎</button>
 
@@ -122,6 +196,7 @@ function popupHtml(p) {
     <h3>${esc(p.name)}</h3>
     <div class="meta">${by}${esc(p.category)}${p.rating ? ` · ★ ${p.rating} (${p.reviews.toLocaleString()} Google reviews)` : ''}</div>
     ${p.note ? `<p>${esc(p.note)}</p>` : ''}
+    ${p.story ? `<p class="story">${esc(p.story)}</p>` : ''}
     <a class="go" href="${esc(url)}" target="_blank" rel="noopener">Open in Google Maps</a>
   </div>`;
 }
@@ -191,7 +266,8 @@ function showResults() {
     li.onclick = () => {
       results.style.display = 'none';
       search.blur();
-      map.setView(m.getLatLng(), Math.max(map.getZoom(), 16));
+      // No animation: Leaflet skips moving the popup into view while a pan is running.
+      map.setView(m.getLatLng(), Math.max(map.getZoom(), 16), { animate: false });
       m.openPopup();
     };
     results.appendChild(li);
@@ -212,15 +288,23 @@ map.on('click', () => { results.style.display = 'none'; search.blur(); });
 
 fetch('places.json').then(r => r.json()).then(places => {
   markers = places.map(p => {
-    const m = L.marker([p.lat, p.lng], { icon: icon(p), zIndexOffset: p.source === 'friend' ? 1000 : 0 })
-      .bindPopup(popupHtml(p));
+    const m = L.marker([p.lat, p.lng], { icon: icon(p), zIndexOffset: p.source === 'friend' ? 1000 : 0 });
     m.place = p;
-    m.text = fold([p.name, p.category, p.by, p.note, p.source === 'friend' ? 'friend' : ''].join(' '));
+    m.text = fold([p.name, p.category, p.by, p.note, p.story, p.source === 'friend' ? 'friend' : ''].join(' '));
     return m;
   });
   buildBar(places);
+  // Keep popups clear of the search bar and chips at the top.
+  const pad = document.getElementById('top').offsetHeight + 8;
+  for (const m of markers) {
+    m.bindPopup(popupHtml(m.place), { maxWidth: 290, maxHeight: 300, autoPanPaddingTopLeft: [8, pad], autoPanPaddingBottomRight: [8, 8] });
+  }
   applyFilters();
 });
+
+const guide = document.getElementById('guide');
+document.getElementById('guideBtn').onclick = () => { guide.classList.add('open'); guide.scrollTop = 0; };
+document.getElementById('guideClose').onclick = () => guide.classList.remove('open');
 
 let me;
 document.getElementById('locate').onclick = () => map.locate({ setView: true, maxZoom: 16 });

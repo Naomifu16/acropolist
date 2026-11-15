@@ -14,7 +14,9 @@ Add an entry to `places.json`:
   "note": "What to order", "lat": 37.98058, "lng": 23.72453, "url": "https://maps.app.goo.gl/..." }
 ```
 
-`source` is `friend` or `general`. `by`, `note` and `url` are optional.
+`source` is `friend` or `general`. `by`, `note`, `url` and `story` (a short history or anecdote shown in the popup) are optional.
+
+The "Athens in brief" guide behind the **i** button is plain HTML in `index.html`.
 
 ## Run locally
 
