@@ -104,7 +104,15 @@
   }
   .pin.friend { box-shadow: 0 0 0 3px #111, 0 1px 5px 3px rgba(0,0,0,.4); }
   .popup h3 { margin: 0 0 4px; font-size: 16px; }
-  .popup .meta { font-size: 12px; color: #666; margin-bottom: 6px; }
+  .popup .meta { font-size: 13px; color: #666; margin-bottom: 6px; }
+  .popup .kind { font-size: 14px; font-weight: 600; color: #333; display: flex; align-items: center; gap: 7px; margin-bottom: 3px; }
+  .popup .rating { font-size: 13px; color: #555; margin-bottom: 6px; }
+  .popup .rating b { color: #111; font-size: 14px; }
+  .flight { border: 1px solid #ddd; border-radius: 12px; padding: 12px 14px; margin-bottom: 10px; }
+  .flight .t { font-size: 16px; font-weight: 700; }
+  .flight .s { font-size: 14px; color: #555; margin: 3px 0 8px; }
+  .flight a { display: inline-block; background: #1a73e8; color: #fff; text-decoration: none; padding: 7px 12px; border-radius: 6px; font-size: 14px; }
+  .empty { font-size: 14px; color: #777; border: 1px dashed #ccc; border-radius: 12px; padding: 12px 14px; }
   .popup .by { font-weight: 600; color: #111; }
   .popup p { margin: 0 0 8px; font-size: 14px; }
   .popup p.story { line-height: 1.4; color: #333; }
@@ -131,7 +139,10 @@
 </div>
 <div id="page-days" class="page">
   <div class="inner">
-    <h2>Day plans</h2>
+    <h2>Trip</h2>
+    <h3>Flights</h3>
+    <div id="flights"></div>
+    <h3>Day plans</h3>
     <p class="lead">Ideas for full days, planned for travelling with a toddler: sights in the morning, a midday nap on the move, a short afternoon. Pick the ones you like; the order does not matter.</p>
     <div id="days"></div>
   </div>
@@ -200,7 +211,7 @@
 </div>
 <nav id="tabs">
   <button data-tab="map" class="on">Map</button>
-  <button data-tab="days">Day plans</button>
+  <button data-tab="days">Trip</button>
   <button data-tab="guide">Guide</button>
 </nav>
 <button id="locate" title="Where am I?" aria-label="Show my location">◎</button>
@@ -239,11 +250,13 @@ let markers = [];
 function popupHtml(p) {
   const url = p.url || 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(p.name + ', Athens');
   const by = p.source === 'friend'
-    ? `<span class="by">${p.by ? 'Recommended by ' + esc(p.by) : "Friend's pick"}</span> · `
+    ? `<span class="by">${p.by ? 'Recommended by ' + esc(p.by) : "Friend's pick"}</span>`
     : '';
   return `<div class="popup">
     <h3>${esc(p.name)}</h3>
-    <div class="meta">${by}${esc(p.category)}${p.rating ? ` · ★ ${p.rating} (${p.reviews.toLocaleString()} Google reviews)` : ''}</div>
+    <div class="kind"><span class="dot" style="background:${color(p.category)}"></span>${esc(p.type || p.category)}</div>
+    <div class="rating">${p.rating ? `<b>★ ${p.rating}</b> on Google Maps · ${p.reviews.toLocaleString()} reviews` : 'No rating added yet'}</div>
+    ${by ? `<div class="meta">${by}</div>` : ''}
     ${p.note ? `<p>${esc(p.note)}</p>` : ''}
     ${p.story ? `<p class="story">${esc(p.story)}</p>` : ''}
     <a class="go" href="${esc(url)}" target="_blank" rel="noopener">Open in Google Maps</a>
@@ -311,7 +324,7 @@ function showResults() {
     const li = document.createElement('li');
     li.innerHTML = `<span class="dot ${p.source === 'friend' ? 'friend' : ''}" style="background:${color(p.category)}"></span>
       <div><div class="name">${esc(p.name)}</div>
-      <div class="sub">${esc(p.category)}${p.source === 'friend' ? ' · ' + (p.by ? esc(p.by) : "Friend's pick") : ''}</div></div>`;
+      <div class="sub">${esc(p.type || p.category)}${p.rating ? ' · ★ ' + p.rating : ''}${p.source === 'friend' ? ' · ' + (p.by ? esc(p.by) : "Friend's pick") : ''}</div></div>`;
     li.onclick = () => {
       results.style.display = 'none';
       search.blur();
@@ -340,7 +353,7 @@ fetch('places.json', { cache: 'no-cache' }).then(r => r.json()).then(places => {
   markers = places.map(p => {
     const m = L.marker([p.lat, p.lng], { icon: icon(p), zIndexOffset: p.source === 'friend' ? 1000 : 0 });
     m.place = p;
-    m.text = fold([p.name, p.category, p.by, p.note, p.story, p.source === 'friend' ? 'friend' : ''].join(' '));
+    m.text = fold([p.name, p.category, p.type, p.by, p.note, p.story, p.source === 'friend' ? 'friend' : ''].join(' '));
     return m;
   });
   buildBar(places);
@@ -351,6 +364,7 @@ fetch('places.json', { cache: 'no-cache' }).then(r => r.json()).then(places => {
   }
   applyFilters();
   buildStories(places);
+  fetch('flights.json', { cache: 'no-cache' }).then(r => r.json()).then(buildFlights);
   return fetch('days.json', { cache: 'no-cache' }).then(r => r.json()).then(days => buildDays(days, places));
 });
 
@@ -398,6 +412,17 @@ function buildDays(days, places) {
     html += '</div></details>';
   }
   document.getElementById('days').innerHTML = html;
+}
+
+// Live status opens in a Google search for the flight, which shows delays, gates and cancellations.
+function buildFlights(flights) {
+  const el = document.getElementById('flights');
+  if (!flights.length) { el.innerHTML = '<div class="empty">No flights added yet.</div>'; return; }
+  el.innerHTML = flights.map(f => `<div class="flight">
+    <div class="t">${esc(f.number)} · ${esc(f.from)} → ${esc(f.to)}</div>
+    <div class="s">${esc([f.date, f.time].filter(Boolean).join(' · '))}</div>
+    <a href="https://www.google.com/search?q=${encodeURIComponent(f.number + ' flight status')}" target="_blank" rel="noopener">Check live status</a>
+  </div>`).join('');
 }
 
 function buildStories(places) {
