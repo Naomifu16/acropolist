@@ -286,7 +286,8 @@ search.addEventListener('focus', showResults);
 clearBtn.onclick = () => { search.value = ''; onSearch(); };
 map.on('click', () => { results.style.display = 'none'; search.blur(); });
 
-fetch('places.json').then(r => r.json()).then(places => {
+// no-cache: always check for a newer places.json instead of trusting the browser's copy.
+fetch('places.json', { cache: 'no-cache' }).then(r => r.json()).then(places => {
   markers = places.map(p => {
     const m = L.marker([p.lat, p.lng], { icon: icon(p), zIndexOffset: p.source === 'friend' ? 1000 : 0 });
     m.place = p;
