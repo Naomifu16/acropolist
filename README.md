@@ -4,6 +4,7 @@ A phone-friendly map for my Athens trip: dots coloured by category (food, bars, 
 
 - `index.html` – the app (Leaflet, no build step)
 - `places.json` – all the pins
+- `days.json` – the day plans
 
 ## Adding a place
 
@@ -16,7 +17,11 @@ Add an entry to `places.json`:
 
 `source` is `friend` or `general`. `by`, `note`, `url` and `story` (a short history or anecdote shown in the popup) are optional.
 
-The "Athens in brief" guide behind the **i** button is plain HTML in `index.html`.
+## Tabs
+
+- **Map** – the pins, filters and search.
+- **Day plans** – proposed days, from `days.json`. Each day has `title`, `where` (the group heading), `summary`, `stops` (`time`, `text`, and optionally `place`, the exact name of a pin to link to) and `tips`.
+- **Guide** – history and practical notes (plain HTML in `index.html`), plus every pin that has a `story`.
 
 ## Run locally
 
