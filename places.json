@@ -16,7 +16,8 @@
   "rating": 4.8,
   "reviews": 149913,
   "lat": 37.97153,
-  "lng": 23.72575
+  "lng": 23.72575,
+  "story": "The Parthenon was built in just 15 years (447–432 BC) under Pericles. It has almost no straight lines: the columns bulge and lean inward slightly so that it looks perfectly straight to the eye. It survived 2,000 years as a temple, a church and a mosque, until 1687, when a Venetian shell hit the gunpowder the Ottomans stored inside and blew out its middle."
  },
  {
   "name": "Panathenaic Stadium",
@@ -25,7 +26,8 @@
   "rating": 4.7,
   "reviews": 47198,
   "lat": 37.96833,
-  "lng": 23.74111
+  "lng": 23.74111,
+  "story": "The only stadium in the world built entirely of marble. Its ancient version hosted the Panathenaic Games; it was rebuilt for the first modern Olympics in 1896, where the Greek water-carrier Spyridon Louis won the first marathon and became a national hero. The Olympic flame is still handed over here before every Games."
  },
  {
   "name": "Ancient Agora of Athens",
@@ -34,7 +36,8 @@
   "rating": 4.7,
   "reviews": 41240,
   "lat": 37.9749,
-  "lng": 23.72209
+  "lng": 23.72209,
+  "story": "The everyday heart of ancient Athens: market, courts and politics in one place. Socrates spent his days here questioning passers-by. Citizens voted to exile politicians by scratching names on pottery shards (ostraka), which gave us the word \"ostracise\". The Stoics are named after a stoa (colonnade) here where their founder Zeno taught."
  },
  {
   "name": "Monastiraki Square",
@@ -43,7 +46,8 @@
   "rating": 4.5,
   "reviews": 29151,
   "lat": 37.97641,
-  "lng": 23.72589
+  "lng": 23.72589,
+  "story": "Named after the \"little monastery\" whose church still stands in the square. The mosque beside it was built in 1759 by the Ottoman governor Tzistarakis, who, the story goes, burned a column from the Temple of Olympian Zeus to make lime for it. Athenians blamed the plague that followed on this sacrilege and he was removed from office."
  },
  {
   "name": "Roman Agora",
@@ -52,7 +56,8 @@
   "rating": 4.5,
   "reviews": 15291,
   "lat": 37.97425,
-  "lng": 23.7261
+  "lng": 23.7261,
+  "story": "Built with money from Julius Caesar and Augustus when Athens' market outgrew the old Agora. Its star is the octagonal Tower of the Winds, a 2,000-year-old weather station: sundials on the walls, a water clock inside and a wind vane on top. Each side shows the god of the wind that blows from that direction."
  },
  {
   "name": "Temple of Hephaestus",
@@ -61,7 +66,8 @@
   "rating": 4.8,
   "reviews": 13256,
   "lat": 37.97559,
-  "lng": 23.72145
+  "lng": 23.72145,
+  "story": "The best-preserved ancient Greek temple anywhere, older than the Parthenon by a few years. It survived because it was turned into a church around the 7th century and stayed one for over a thousand years. Hephaestus was the god of metalworking, and this was the blacksmiths' quarter."
  },
  {
   "name": "Metropolitan Cathedral of Athens",
@@ -70,7 +76,8 @@
   "rating": 4.7,
   "reviews": 10372,
   "lat": 37.97538,
-  "lng": 23.72985
+  "lng": 23.72985,
+  "story": "Built between 1842 and 1862 using marble from 72 demolished churches. Right beside it sits the far more charming Little Metropolis, a tiny medieval church made almost entirely of recycled ancient carvings. The statue outside is Archbishop Damaskinos, who publicly protested the deportation of Greek Jews in 1943."
  },
  {
   "name": "Technopolis City of Athens",
@@ -79,7 +86,8 @@
   "rating": 4.5,
   "reviews": 18906,
   "lat": 37.97823,
-  "lng": 23.71365
+  "lng": 23.71365,
+  "story": "The city's old gasworks, which lit and powered Athens from 1857 to 1984 and gave the Gazi neighbourhood its name (gazi means gas). The chimneys and gas holders were kept, and it is now a venue for concerts, festivals and exhibitions."
  },
  {
   "name": "Lycabettus Hill",
@@ -88,7 +96,8 @@
   "rating": 4.7,
   "reviews": 26103,
   "lat": 37.98188,
-  "lng": 23.74312
+  "lng": 23.74312,
+  "story": "At 277 m, the highest point in central Athens. Myth says Athena was carrying this rock to make the Acropolis taller when a crow brought her bad news and she dropped it in shock. A funicular runs up through a tunnel from Kolonaki; sunset from the top is the classic view of the city."
  },
  {
   "name": "Philopappos Hill",
@@ -97,7 +106,8 @@
   "rating": 4.8,
   "reviews": 22827,
   "lat": 37.96712,
-  "lng": 23.72158
+  "lng": 23.72158,
+  "story": "Named after the monument on top to Philopappos, an exiled prince from Asia Minor who became a beloved benefactor of Athens around 115 AD. In 1687 the Venetians fired from this hill the shell that blew up the Parthenon. It has the best straight-on view of the Acropolis, and a cave on its slope is traditionally called Socrates' prison."
  },
  {
   "name": "Areopagus (Mars Hill)",
@@ -106,7 +116,8 @@
   "rating": 4.8,
   "reviews": 5800,
   "lat": 37.97237,
-  "lng": 23.72323
+  "lng": 23.72323,
+  "story": "\"Ares' rock\": in myth the gods tried Ares here for murder, and it became Athens' homicide court. In 51 AD the Apostle Paul gave his sermon about the \"unknown god\" on this rock; the text is on a bronze plaque at its foot. Free, great at sunset, and the polished marble is very slippery."
  },
  {
   "name": "Athens National Garden",
@@ -115,7 +126,8 @@
   "rating": 4.6,
   "reviews": 44649,
   "lat": 37.97259,
-  "lng": 23.73743
+  "lng": 23.73743,
+  "story": "Created from 1838 as the private garden of Queen Amalia, who is said to have spent hours a day tending it and imported hundreds of plant species. The row of tall palms at the entrance was planted by her. It opened to the public in the 1920s; inside you'll find ancient ruins, a duck pond and turtles."
  },
  {
   "name": "Stavros Niarchos Park",
@@ -124,7 +136,8 @@
   "rating": 4.8,
   "reviews": 46100,
   "lat": 37.9422,
-  "lng": 23.69346
+  "lng": 23.69346,
+  "story": "A park on the slope of an artificial hill, designed by Renzo Piano and opened in 2016. Under the hill are the National Library and the Greek National Opera; walk to the top for a view of the sea on one side and the Acropolis on the other. The whole complex was a private gift to the Greek state."
  },
  {
   "name": "Acropolis Museum",
@@ -133,7 +146,8 @@
   "rating": 4.7,
   "reviews": 86809,
   "lat": 37.96845,
-  "lng": 23.72852
+  "lng": 23.72852,
+  "story": "Opened in 2009, built over an excavated ancient neighbourhood you can see through the glass floors. The top floor has the exact size and orientation of the Parthenon and shows its frieze in order, with plaster casts marking the pieces Lord Elgin took to London. Five of the six Caryatids are here; the gap is left for the sixth, in the British Museum."
  },
  {
   "name": "National Archaeological Museum",
@@ -142,7 +156,8 @@
   "rating": 4.6,
   "reviews": 40023,
   "lat": 37.98902,
-  "lng": 23.73276
+  "lng": 23.73276,
+  "story": "One of the world's great museums of antiquity. Look for the gold \"Mask of Agamemnon\" (actually about 300 years older than the Trojan War) and the Antikythera mechanism, a 2,000-year-old geared computer for predicting eclipses, found by sponge divers in 1901. In 1941 the staff buried the statues under the floors to hide them from the occupying forces."
  },
  {
   "name": "Benaki Museum",
@@ -151,7 +166,8 @@
   "rating": 4.7,
   "reviews": 8161,
   "lat": 37.97595,
-  "lng": 23.74045
+  "lng": 23.74045,
+  "story": "The family mansion and lifelong collection of Antonis Benakis, covering Greek culture from prehistory to the 20th century. Greeks know him as the mischievous hero of \"Trelantonis\" (Crazy Antonis), a classic children's book his sister Penelope Delta wrote about their childhood. The rooftop cafe overlooks the National Garden."
  },
  {
   "name": "Basil & Elise Goulandris Foundation",
@@ -160,7 +176,8 @@
   "rating": 4.8,
   "reviews": 6157,
   "lat": 37.96969,
-  "lng": 23.74284
+  "lng": 23.74284,
+  "story": "The private collection of a shipowner couple, kept out of public view for decades and finally opened as a museum in 2019. Van Gogh, Cezanne, Monet, Picasso and Giacometti share the building with leading modern Greek painters."
  },
  {
   "name": "Museum of Cycladic Art",
@@ -169,7 +186,8 @@
   "rating": 4.7,
   "reviews": 5146,
   "lat": 37.97567,
-  "lng": 23.74282
+  "lng": 23.74282,
+  "story": "Home to the flat, minimalist marble figurines carved on the Cycladic islands some 4,500 years ago. They look strikingly modern, and directly inspired Modigliani, Brancusi and Picasso. Originally they were painted with eyes, hair and jewellery."
  },
  {
   "name": "Byzantine & Christian Museum",
@@ -178,7 +196,8 @@
   "rating": 4.6,
   "reviews": 5142,
   "lat": 37.97531,
-  "lng": 23.74463
+  "lng": 23.74463,
+  "story": "A top collection of Byzantine icons and mosaics, set in a villa built in 1848 for the Duchess of Plaisance, an eccentric French aristocrat who became a legend in early modern Athens. The story goes that she kept her daughter's embalmed body at home for years."
  },
  {
   "name": "National Historical Museum",
@@ -187,7 +206,8 @@
   "rating": 4.7,
   "reviews": 4939,
   "lat": 37.97788,
-  "lng": 23.73288
+  "lng": 23.73288,
+  "story": "Housed in the Old Parliament, where Greek MPs sat from 1875 to 1935. Prime Minister Deligiannis was stabbed to death on its steps in 1905 by a gambler angry that he had closed the gambling dens. Inside: the War of Independence, including Lord Byron's helmet. The horseman outside is the revolutionary general Kolokotronis."
  },
  {
   "name": "War Museum Athens",
@@ -196,7 +216,8 @@
   "rating": 4.7,
   "reviews": 4498,
   "lat": 37.97546,
-  "lng": 23.74555
+  "lng": 23.74555,
+  "story": "Greek military history from antiquity to the Second World War, opened in 1975. The fighter planes and artillery in the courtyard can be seen for free from the street."
  },
  {
   "name": "Kotsanas Museum of Ancient Greek Technology",
@@ -205,7 +226,8 @@
   "rating": 4.8,
   "reviews": 4320,
   "lat": 37.97769,
-  "lng": 23.73819
+  "lng": 23.73819,
+  "story": "Working reconstructions of ancient Greek inventions: a robot servant that pours wine, an alarm clock attributed to Plato, a steam engine from the 1st century AD and the Antikythera mechanism. Many can be touched and operated, so it is good with kids."
  },
  {
   "name": "Karamanlidika",
