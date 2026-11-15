@@ -1,283 +1,289 @@
 [
  {
-  "title": "The Acropolis morning",
-  "where": "In the city",
-  "summary": "The one unmissable sight, done early while everyone is fresh, then an easy afternoon on car-free streets.",
+  "title": "בוקר באקרופוליס",
+  "where": "בעיר",
+  "city": true,
+  "summary": "האתר שאסור לפספס, מוקדם בבוקר כשכולם רעננים, ואחריו אחר צהריים רגוע ברחובות ללא מכוניות.",
   "stops": [
    {
     "time": "8:00",
     "place": "Acropolis of Athens",
-    "text": "Be at the gate for opening: fewer people and cooler. Strollers are not allowed on the rock, so take a baby carrier. Allow 1.5 hours."
+    "text": "היו בשער עם הפתיחה: פחות אנשים וקריר יותר. אסור להעלות עגלות לסלע, אז קחו מנשא. הקדישו כשעה וחצי."
    },
    {
     "time": "10:00",
     "place": "Alchemist Cafe Patisserie",
-    "text": "Coffee and a snack right below the Acropolis."
+    "text": "קפה ומשהו קטן לאכול ממש מתחת לאקרופוליס."
    },
    {
     "time": "10:45",
     "place": "Acropolis Museum",
-    "text": "Flat floors and lifts, so the stroller works here. An hour is enough: the Caryatids and the top-floor Parthenon gallery."
+    "text": "רצפות ישרות ומעליות, כך שאפשר להיכנס עם העגלה. שעה מספיקה: הקריאטידות וגלריית הפרתנון בקומה העליונה."
    },
    {
     "time": "12:15",
     "place": "Liondi Traditional Greek Restaurant",
-    "text": "Lunch nearby (or Arcadia or Yard, all on the same street)."
+    "text": "ארוחת צהריים בסמוך (או Arcadia או Yard, כולן באותו רחוב)."
    },
    {
     "time": "13:30",
-    "text": "Nap walk: push the stroller along the wide pedestrian street around the Acropolis (Dionysiou Areopagitou, then Apostolou Pavlou) towards Thissio."
+    "text": "הליכת שנ״צ: טיילו עם העגלה במדרחוב הרחב שמקיף את האקרופוליס (דיוניסיו אראופגיטו ואז אפוסטולו פאבלו) לכיוון תיסיו."
    },
    {
     "time": "15:30",
     "place": "Philopappos Hill",
-    "text": "The lower stone paths are shady and car-free, good for a toddler to walk. The summit is a short climb, easier with the carrier."
+    "text": "שבילי האבן התחתונים מוצלים וללא מכוניות, מצוינים להליכה של פעוטה. הפסגה היא טיפוס קצר, קל יותר עם המנשא."
    }
   ],
   "tips": [
-   "If she walks on the Acropolis, hold her hand: the marble is polished and there are drops without railings.",
-   "There is no shade or food on the rock. Bring water and a hat."
+   "אם היא הולכת בעצמה באקרופוליס, החזיקו לה את היד: השיש מלוטש ויש מדרגות ושפות בלי מעקה.",
+   "על הסלע אין צל ואין אוכל. הביאו מים וכובע."
   ]
  },
  {
-  "title": "Ancient Agora and the old town",
-  "where": "In the city",
-  "summary": "Ruins with grass and room to run, then the liveliest square in Athens.",
+  "title": "האגורה העתיקה והעיר העתיקה",
+  "where": "בעיר",
+  "city": true,
+  "summary": "עתיקות עם דשא ומקום לרוץ, ואחר כך הכיכר התוססת ביותר באתונה.",
   "stops": [
    {
     "time": "9:00",
     "place": "Ancient Agora of Athens",
-    "text": "A big green site with gravel paths where she can roam safely. The rebuilt Stoa of Attalos has a small museum and shade."
+    "text": "אתר גדול וירוק עם שבילי חצץ, שבו היא יכולה להסתובב בבטחה. בסטואה של אטאלוס המשוחזרת יש מוזיאון קטן וצל."
    },
    {
     "time": "10:15",
     "place": "Temple of Hephaestus",
-    "text": "Inside the same site, up a gentle path. The best-preserved Greek temple there is."
+    "text": "בתוך אותו אתר, במעלה שביל מתון. המקדש היווני השמור ביותר שיש."
    },
    {
     "time": "11:15",
     "place": "Monastiraki Square",
-    "text": "Street musicians, fruit stalls and the flea market lanes. Busy: keep her in the stroller or carrier here."
+    "text": "נגני רחוב, דוכני פירות וסמטאות שוק הפשפשים. צפוף: כאן עדיף שתהיה בעגלה או במנשא."
    },
    {
     "time": "12:15",
     "place": "Maiandros Restaurant",
-    "text": "Lunch a minute from the square (Efcharis is next door). Feyrouz is a good quick alternative for savoury pies."
+    "text": "ארוחת צהריים דקה מהכיכר (Efcharis נמצאת ממש ליד). Feyrouz היא חלופה מהירה וטובה למאפים מלוחים."
    },
    {
     "time": "13:30",
-    "text": "Nap walk through Plaka's quieter lanes. Expect some steps and cobbles; the carrier is easier than the stroller in upper Plaka."
+    "text": "הליכת שנ״צ בסמטאות השקטות של פלאקה. יש מדרגות ואבני ריצוף; בחלק העליון של פלאקה המנשא נוח יותר מהעגלה."
    },
    {
     "time": "15:30",
     "place": "Roman Agora",
-    "text": "Small and quick. The Tower of the Winds is the highlight and can be seen well from the fence if you would rather not go in."
+    "text": "קטנה ומהירה. מגדל הרוחות הוא גולת הכותרת, ורואים אותו היטב גם מהגדר אם לא בא לכם להיכנס."
    },
    {
     "time": "16:15",
     "place": "Koukouvaya Desserts",
-    "text": "Something sweet to finish."
+    "text": "משהו מתוק לסיום."
    }
   ],
   "tips": [
-   "Monastiraki is the main spot for pickpockets. Keep bags zipped and in front of you."
+   "מונסטירקי הוא המקום העיקרי לכייסים. שמרו על תיקים סגורים ולפני הגוף."
   ]
  },
  {
-  "title": "Guards, garden and the marble stadium",
-  "where": "In the city",
-  "summary": "The most toddler-friendly day: soldiers, ducks, a playground and a running track.",
+  "title": "משמר, גן ואצטדיון השיש",
+  "where": "בעיר",
+  "city": true,
+  "summary": "היום הכי ידידותי לפעוטות: חיילים, ברווזים, גן שעשועים ומסלול ריצה.",
   "stops": [
    {
     "time": "10:00",
-    "text": "Syntagma Square: the guards in front of Parliament change on the hour. On Sundays the full parade is at 11:00. The pigeons are a show of their own."
+    "text": "כיכר סינטגמה: חילופי המשמר מול הפרלמנט מתקיימים בכל שעה עגולה. בימי ראשון יש מצעד מלא ב־11:00. היונים בכיכר הן הצגה בפני עצמה."
    },
    {
     "time": "10:30",
     "place": "Athens National Garden",
-    "text": "Enter beside Parliament. Shady, flat paths, a duck pond, turtles and a playground. Let her set the pace."
+    "text": "היכנסו ליד הפרלמנט. שבילים מוצלים וישרים, בריכת ברווזים, צבים וגן שעשועים. תנו לה לקבוע את הקצב."
    },
    {
     "time": "12:00",
     "place": "Aspro Alogo",
-    "text": "Lunch close to the garden."
+    "text": "ארוחת צהריים קרוב לגן."
    },
    {
     "time": "13:15",
-    "text": "Nap walk through the garden to the Zappeion hall and on towards the stadium."
+    "text": "הליכת שנ״צ דרך הגן אל בניין הזאפיון והלאה לכיוון האצטדיון."
    },
    {
     "time": "15:00",
     "place": "Panathenaic Stadium",
-    "text": "She can run on the track where the 1896 Olympics were held, and you can stand on the podium."
+    "text": "היא יכולה לרוץ על המסלול שבו נערכה אולימפיאדת 1896, ואתם יכולים לעמוד על הפודיום."
    },
    {
     "time": "16:15",
     "place": "Choureal - Choux & Profiterole",
-    "text": "Fresh profiteroles on the way back."
+    "text": "פרופיטרולים טריים בדרך חזרה."
    }
   ],
   "tips": [
-   "The garden closes at sunset.",
-   "The stadium's upper tiers are steep with no railings; stay at track level with her."
+   "הגן נסגר עם השקיעה.",
+   "היציעים העליונים של האצטדיון תלולים ובלי מעקות; הישארו איתה בגובה המסלול."
   ]
  },
  {
-  "title": "Museums and the sunset hill",
-  "where": "In the city",
-  "summary": "A gentle indoor morning in Kolonaki, then the funicular up to the best view in Athens.",
+  "title": "מוזיאונים וגבעת השקיעה",
+  "where": "בעיר",
+  "city": true,
+  "summary": "בוקר רגוע בתוך מבנים בקולונאקי, ואז רכבל אל הנוף היפה ביותר באתונה.",
   "stops": [
    {
     "time": "10:00",
     "place": "Kotsanas Museum of Ancient Greek Technology",
-    "text": "Hands-on machines and moving models, so more fun with a small child than glass cases. Or choose the Museum of Cycladic Art nearby."
+    "text": "מכונות שאפשר להפעיל ודגמים נעים, כך שעם ילדה קטנה זה מהנה יותר מוויטרינות זכוכית. אפשר במקום זה את המוזיאון לאמנות קיקלדית הסמוך."
    },
    {
     "time": "11:30",
     "place": "Benaki Museum",
-    "text": "Optional: skip the galleries and go straight to the rooftop cafe for lunch with a view over the garden."
+    "text": "רשות: דלגו על התצוגות ועלו היישר לבית הקפה שעל הגג לארוחת צהריים מול הגן."
    },
    {
     "time": "13:00",
-    "text": "Nap in the stroller or back at your room."
+    "text": "שנ״צ בעגלה או בחדר."
    },
    {
     "time": "15:45",
     "place": "Lycabettus Hill",
-    "text": "Take a taxi to the funicular station in Kolonaki (the streets up to it are steep with many steps). Ride up for sunset over the Acropolis and the sea."
+    "text": "קחו מונית לתחנת הרכבל בקולונאקי (הרחובות שעולים אליה תלולים ומלאי מדרגות). עלו לשקיעה מעל האקרופוליס והים."
    }
   ],
   "tips": [
-   "There are steps at the top of Lycabettus. Take the carrier, not the stroller.",
-   "In November the sun sets a little after 17:00, and it is windy and cooler at the top."
+   "בראש ליקבטוס יש מדרגות. קחו מנשא, לא עגלה.",
+   "בנובמבר השמש שוקעת קצת אחרי 17:00, ולמעלה יש רוח וקריר יותר."
   ]
  },
  {
-  "title": "Sea air at the Niarchos park",
-  "where": "In the city",
-  "summary": "A break from ruins: lawns, a big playground and a view of the sea, 15 minutes by taxi from the centre.",
+  "title": "אוויר ים בפארק ניארכוס",
+  "where": "בעיר",
+  "city": true,
+  "summary": "הפסקה מהעתיקות: מדשאות, גן שעשועים גדול ונוף לים, 15 דקות במונית מהמרכז.",
   "stops": [
    {
     "time": "10:00",
     "place": "Stavros Niarchos Park",
-    "text": "Start at the playgrounds, then walk the gentle slope up to the top of the hill for the view: sea on one side, Acropolis on the other. Fully stroller-friendly."
+    "text": "התחילו בגני השעשועים, ואז עלו במדרון המתון אל ראש הגבעה בשביל הנוף: ים מצד אחד, אקרופוליס מהצד השני. הכול נגיש לעגלה."
    },
    {
     "time": "12:00",
-    "text": "Lunch at one of the cafes in the centre, or bring a picnic for the lawn."
+    "text": "ארוחת צהריים באחד מבתי הקפה במתחם, או פיקניק על הדשא."
    },
    {
     "time": "13:00",
-    "text": "Nap in the stroller along the canal, or head back."
+    "text": "שנ״צ בעגלה לאורך התעלה, או חזרה למלון."
    },
    {
     "time": "15:00",
-    "text": "Optional: Flisvos Marina, 10 minutes further by taxi, has a seafront promenade, yachts to look at and another playground."
+    "text": "רשות: מרינת פליסבוס, עוד 10 דקות במונית, עם טיילת על הים, יאכטות להסתכל עליהן ועוד גן שעשועים."
    }
   ],
   "tips": [
-   "Good choice for the day after a long sightseeing day."
+   "בחירה טובה ליום שאחרי יום עמוס באתרים."
   ]
  },
  {
-  "title": "Rainy day",
-  "where": "In the city",
-  "summary": "Keep this one in your pocket. November has some wet days.",
+  "title": "יום גשום",
+  "where": "בעיר",
+  "city": true,
+  "summary": "תוכנית לשמור בכיס. בנובמבר יש כמה ימים רטובים.",
   "stops": [
    {
     "time": "10:00",
     "place": "National Archaeological Museum",
-    "text": "Huge and stroller-friendly. Pick three things rather than everything: the gold Mask of Agamemnon, the bronze Zeus or Poseidon, and the Antikythera mechanism."
+    "text": "ענק ונגיש לעגלה. בחרו שלושה דברים במקום הכול: מסכת אגממנון מזהב, פסל הברונזה של זאוס או פוסידון, ומנגנון אנטיקיתרה."
    },
    {
     "time": "12:15",
     "place": "Atitamos",
-    "text": "Lunch a few minutes' walk away."
+    "text": "ארוחת צהריים כמה דקות הליכה משם."
    },
    {
     "time": "14:30",
     "place": "Basil & Elise Goulandris Foundation",
-    "text": "After the nap: a calm, modern museum that takes about an hour. Van Gogh, Monet and Picasso."
+    "text": "אחרי השנ״צ: מוזיאון רגוע ומודרני שלוקח כשעה. ואן גוך, מונה ופיקאסו."
    }
   ],
   "tips": [
-   "The Acropolis Museum is the other good rainy-day option if you have not been yet."
+   "מוזיאון האקרופוליס הוא האפשרות הטובה השנייה ליום גשום, אם עוד לא הייתם."
   ]
  },
  {
-  "title": "Cape Sounion and the coast",
-  "where": "Out of town",
-  "summary": "The Temple of Poseidon on a cliff above the sea, about 1.5 hours' drive along the coast. Half a day.",
+  "title": "כף סוניון והחוף",
+  "where": "מחוץ לעיר",
+  "summary": "מקדש פוסידון על צוק מעל הים, כשעה וחצי נסיעה לאורך החוף. חצי יום.",
   "stops": [
    {
     "time": "13:00",
-    "text": "Leave after lunch so she naps in the car on the way. Go by rental car or a pre-booked taxi, and ask for a child seat in advance."
+    "text": "צאו אחרי ארוחת הצהריים כדי שתישן באוטו בדרך. סעו ברכב שכור או במונית שהוזמנה מראש, ובקשו מראש כיסא בטיחות."
    },
    {
     "time": "14:45",
-    "text": "Temple of Poseidon. A short walk from the car park on uneven ground. Lord Byron carved his name on one of the columns."
+    "text": "מקדש פוסידון. הליכה קצרה מהחניה על קרקע לא ישרה. לורד ביירון חרט את שמו על אחד העמודים."
    },
    {
     "time": "16:00",
-    "text": "Stay for the light before sunset, then drive back along the coast road."
+    "text": "הישארו לאור שלפני השקיעה, ואז חזרו בכביש החוף."
    }
   ],
   "tips": [
-   "It is very windy on the cape: bring a warm layer for her.",
-   "The cliffs are unfenced in places. Carrier or hand-holding the whole time."
+   "בכף יש רוח חזקה מאוד: הביאו לה שכבה חמה.",
+   "בחלק מהמקומות הצוקים לא מגודרים. מנשא או יד ביד כל הזמן."
   ]
  },
  {
-  "title": "Aegina island",
-  "where": "Out of town",
-  "summary": "A real Greek island as a day trip: a harbour town, fishing boats and pistachios.",
+  "title": "האי אגינה",
+  "where": "מחוץ לעיר",
+  "summary": "אי יווני אמיתי בטיול של יום: עיירת נמל, סירות דייגים ופיסטוקים.",
   "stops": [
    {
     "time": "9:00",
-    "text": "Ferry from Piraeus port (metro or taxi from the centre). The slower car ferry takes about 75 minutes and has decks and space for her to walk; the fast boat takes about 40 but you stay seated."
+    "text": "מעבורת מנמל פיראוס (מטרו או מונית מהמרכז). המעבורת האיטית מפליגה כ־75 דקות ויש בה סיפונים ומקום להסתובב איתה; הסירה המהירה מגיעה בכ־40 דקות, אבל יושבים כל הדרך."
    },
    {
     "time": "10:30",
-    "text": "Aegina town: walk the waterfront, watch the boats, buy pistachios, which the island is famous for."
+    "text": "העיירה אגינה: טיילו על שפת הים, הסתכלו על הסירות וקנו פיסטוקים, שהאי מפורסם בהם."
    },
    {
     "time": "12:30",
-    "text": "Fish lunch at the harbour."
+    "text": "ארוחת דגים בנמל."
    },
    {
     "time": "14:00",
-    "text": "Optional: taxi to the Temple of Aphaia, a beautiful hilltop temple (about 25 minutes each way). Otherwise an easy afternoon in town."
+    "text": "רשות: מונית למקדש אפאיה, מקדש יפהפה על ראש גבעה (כ־25 דקות לכל כיוון). אחרת, אחר צהריים רגוע בעיירה."
    },
    {
     "time": "16:00",
-    "text": "Ferry back."
+    "text": "מעבורת חזרה."
    }
   ],
   "tips": [
-   "Check the return ferry times when you arrive; there are fewer boats in winter.",
-   "Skip this one if the sea is rough."
+   "בדקו את שעות המעבורות חזרה מיד כשאתם מגיעים; בחורף יש פחות הפלגות.",
+   "ותרו על הטיול הזה אם הים סוער."
   ]
  },
  {
-  "title": "A day for her: the zoo",
-  "where": "Out of town",
-  "summary": "Attica Zoological Park, near the airport, about 40 minutes by taxi. Large, flat and made for small children.",
+  "title": "יום בשבילה: גן החיות",
+  "where": "מחוץ לעיר",
+  "summary": "הפארק הזואולוגי של אטיקה, ליד שדה התעופה, כ־40 דקות במונית. גדול, מישורי ומותאם לילדים קטנים.",
   "stops": [
    {
     "time": "10:00",
-    "text": "Arrive at opening and start with the birds and the farm animals."
+    "text": "הגיעו עם הפתיחה והתחילו בציפורים ובחיות המשק."
    },
    {
     "time": "12:30",
-    "text": "Lunch at the zoo cafe."
+    "text": "ארוחת צהריים בקפה של גן החיות."
    },
    {
     "time": "13:30",
-    "text": "She will probably fall asleep in the stroller; finish the loop and head back."
+    "text": "סביר שהיא תירדם בעגלה; סיימו את הסיבוב וחזרו."
    }
   ],
   "tips": [
-   "Works well as a last-day plan if you have a late flight: it is 15 minutes from the airport."
+   "מתאים מאוד ליום האחרון אם יש לכם טיסה מאוחרת: 15 דקות משדה התעופה."
   ]
  }
 ]

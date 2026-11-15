@@ -31,15 +31,15 @@
   .page h3 { margin: 26px 0 8px; font-size: 17px; }
   .page p, .page li { font-size: 15px; line-height: 1.5; }
   .page p { margin: 0 0 10px; }
-  .page ul { margin: 0; padding-left: 20px; }
+  .page ul { margin: 0; padding-inline-start: 20px; }
   .page li { margin-bottom: 8px; }
   .page .when { font-weight: 700; white-space: nowrap; }
   .page .lead { color: #555; }
-  .group { margin: 22px 0 8px; font-size: 13px; font-weight: 700; color: #777; text-transform: uppercase; letter-spacing: .05em; }
+  .group { margin: 22px 0 8px; font-size: 14px; font-weight: 700; color: #777; }
   details.card { border: 1px solid #ddd; border-radius: 12px; margin-bottom: 10px; background: #fff; }
-  details.card > summary { list-style: none; padding: 13px 14px; cursor: pointer; position: relative; padding-right: 36px; }
+  details.card > summary { list-style: none; padding: 13px 14px; cursor: pointer; position: relative; padding-inline-end: 36px; }
   details.card > summary::-webkit-details-marker { display: none; }
-  details.card > summary::after { content: '+'; position: absolute; right: 14px; top: 12px; font-size: 20px; color: #777; }
+  details.card > summary::after { content: '+'; position: absolute; inset-inline-end: 14px; top: 12px; font-size: 20px; color: #777; }
   details.card[open] > summary::after { content: '\2013'; }
   details.card .t { font-size: 16px; font-weight: 700; display: flex; align-items: center; gap: 8px; }
   details.card .s { font-size: 14px; color: #555; margin-top: 3px; line-height: 1.4; }
@@ -115,14 +115,15 @@
   .sug { border: 1px solid #ddd; border-radius: 12px; padding: 4px 14px; }
   .sug .row { padding: 10px 0; border-top: 1px solid #eee; }
   .sug .row:first-child { border-top: none; }
-  .sug .label { font-size: 12px; font-weight: 700; color: #777; text-transform: uppercase; letter-spacing: .05em; }
+  .sug .label { font-size: 13px; font-weight: 700; color: #777; }
   .sug .name { font-size: 16px; font-weight: 700; display: flex; align-items: center; gap: 7px; margin-top: 2px; }
   .sug .text { font-size: 14px; color: #555; line-height: 1.45; margin-top: 2px; }
   #another { margin-top: 10px; border: 1px solid #ccc; background: #fff; color: #333; border-radius: 999px; padding: 8px 14px; font-size: 14px; cursor: pointer; font-family: inherit; }
   .empty { font-size: 14px; color: #777; border: 1px dashed #ccc; border-radius: 12px; padding: 12px 14px; }
   .popup .by { font-weight: 600; color: #111; }
   .popup p { margin: 0 0 8px; font-size: 14px; }
-  .popup p.story { line-height: 1.4; color: #333; }
+  .popup p.story { line-height: 1.5; color: #333; direction: rtl; text-align: right; }
+  .page .name, .page .pname, .page details.card .t { unicode-bidi: plaintext; }
   .popup a.go {
     display: inline-block; background: #1a73e8; color: #fff; text-decoration: none;
     padding: 7px 12px; border-radius: 6px; font-size: 14px;
@@ -144,84 +145,84 @@
   <ul id="results"></ul>
   <div id="bar"></div>
 </div>
-<div id="page-days" class="page">
+<div id="page-days" class="page" dir="rtl" lang="he">
   <div class="inner">
-    <h2>Trip</h2>
-    <h3>Flights</h3>
+    <h2>הטיול</h2>
+    <h3>טיסות</h3>
     <div id="flights"></div>
-    <h3>Today's suggestions</h3>
+    <h3>ההצעות להיום</h3>
     <div id="today"></div>
-    <h3>Day plans</h3>
-    <p class="lead">Ideas for full days, planned for travelling with a toddler: sights in the morning, a midday nap on the move, a short afternoon. Pick the ones you like; the order does not matter.</p>
+    <h3>תוכניות יומיות</h3>
+    <p class="lead">רעיונות לימים מלאים, מתוכננים לטיול עם פעוטה: אתרים בבוקר, שנת צהריים בתנועה ואחר צהריים קצר. בחרו את מה שמתאים לכם; הסדר לא משנה.</p>
     <div id="days"></div>
   </div>
 </div>
-<div id="page-guide" class="page">
+<div id="page-guide" class="page" dir="rtl" lang="he">
   <div class="inner">
-<h2>Guide</h2>
-    <p class="lead">A short history of Athens, the stories behind the places on your map, and things worth knowing.</p>
+    <h2>מדריך</h2>
+    <p class="lead">היסטוריה קצרה של אתונה, הסיפורים שמאחורי המקומות שבמפה, ודברים שכדאי לדעת.</p>
 
-    <h3>How it got its name</h3>
-    <p>Myth says Athena and Poseidon competed to be the city's patron. Poseidon struck the Acropolis rock and a salt-water spring appeared; Athena planted an olive tree. The citizens chose the olive, and the city took her name. An olive tree still grows on the spot, beside the Erechtheion.</p>
+    <h3>איך העיר קיבלה את שמה</h3>
+    <p>לפי המיתוס, אתנה ופוסידון התחרו מי יהיה פטרון העיר. פוסידון הכה בסלע האקרופוליס ומעיין של מי מלח פרץ ממנו; אתנה נטעה עץ זית. התושבים בחרו בזית, והעיר נקראה על שמה. עץ זית צומח במקום עד היום, ליד הארכתאון.</p>
 
-    <h3>3,000 years in ten dates</h3>
+    <h3>3,000 שנה בעשרה תאריכים</h3>
     <ul>
-      <li><span class="when">508 BC</span> – Cleisthenes' reforms give ordinary citizens the vote: the first democracy.</li>
-      <li><span class="when">480 BC</span> – The Persians burn the Acropolis. Weeks later the Athenian fleet destroys theirs at Salamis.</li>
-      <li><span class="when">447–404 BC</span> – The golden age under Pericles: the Parthenon, Socrates, Sophocles. It ends when Athens loses a long war to Sparta.</li>
-      <li><span class="when">86 BC</span> – Rome sacks the city, then falls in love with it. Emperor Hadrian later builds a library, an arch and finishes the Temple of Olympian Zeus.</li>
-      <li><span class="when">529 AD</span> – Emperor Justinian closes the philosophy schools. Athens becomes a quiet Byzantine town.</li>
-      <li><span class="when">1458</span> – The Ottomans take Athens and hold it for almost 400 years.</li>
-      <li><span class="when">1834</span> – After the War of Independence (1821), Athens becomes capital of Greece. It is then a town of only a few thousand people living around the Acropolis.</li>
-      <li><span class="when">1896</span> – The first modern Olympic Games.</li>
-      <li><span class="when">1922–23</span> – Hundreds of thousands of Greek refugees arrive from Asia Minor, transforming the city and bringing rebetiko music with them.</li>
-      <li><span class="when">1973–74</span> – Students at the Polytechnic rise against the military dictatorship on 17 November 1973; democracy returns the following year.</li>
+      <li><span class="when">508 לפנה״ס</span> – הרפורמות של קלייסתנס נותנות לאזרחים הפשוטים זכות הצבעה: הדמוקרטיה הראשונה.</li>
+      <li><span class="when">480 לפנה״ס</span> – הפרסים שורפים את האקרופוליס. שבועות אחר כך הצי האתונאי משמיד את הצי שלהם בסלמיס.</li>
+      <li><span class="when">447–404 לפנה״ס</span> – תור הזהב בימי פריקלס: הפרתנון, סוקרטס, סופוקלס. הוא מסתיים כשאתונה מפסידה לספרטה במלחמה ארוכה.</li>
+      <li><span class="when">86 לפנה״ס</span> – רומא בוזזת את העיר, ואז מתאהבת בה. הקיסר אדריאנוס בונה בה מאוחר יותר ספרייה ושער, ומשלים את מקדש זאוס האולימפי.</li>
+      <li><span class="when">529 לספירה</span> – הקיסר יוסטיניאנוס סוגר את בתי הספר לפילוסופיה. אתונה הופכת לעיירה ביזנטית שקטה.</li>
+      <li><span class="when">1458</span> – העות׳מאנים כובשים את אתונה ושולטים בה כמעט 400 שנה.</li>
+      <li><span class="when">1834</span> – אחרי מלחמת העצמאות (1821), אתונה נעשית בירת יוון. באותה עת היא עיירה של כמה אלפי תושבים בלבד סביב האקרופוליס.</li>
+      <li><span class="when">1896</span> – המשחקים האולימפיים המודרניים הראשונים.</li>
+      <li><span class="when">1922–23</span> – מאות אלפי פליטים יוונים מגיעים מאסיה הקטנה, משנים את פני העיר ומביאים איתם את מוזיקת הרמבטיקו.</li>
+      <li><span class="when">1973–74</span> – סטודנטים בפוליטכניון מתקוממים נגד הדיקטטורה הצבאית ב־17 בנובמבר 1973; הדמוקרטיה חוזרת בשנה שאחריה.</li>
     </ul>
 
-    <h3>Stories to tell at dinner</h3>
+    <h3>סיפורים לארוחת הערב</h3>
     <ul>
-      <li><b>The guards at Syntagma.</b> The Evzones outside Parliament change every hour, with the full ceremony on Sundays at 11:00. Their kilt is said to have 400 pleats, one for each year of Ottoman rule, and each shoe weighs over a kilo.</li>
-      <li><b>The marathon.</b> The race is named after the messenger who, in legend, ran from the battlefield of Marathon to Athens in 490 BC, announced the victory and dropped dead. The Athens Marathon still follows that route and finishes in the Panathenaic Stadium.</li>
-      <li><b>Socrates' last day.</b> Sentenced to death in 399 BC for "corrupting the youth", he refused his friends' offer to help him escape and drank hemlock, still debating philosophy.</li>
-      <li><b>The missing marbles.</b> Around 1801–1812 Lord Elgin removed about half of the Parthenon's surviving sculptures and sold them to the British Museum. Greece has asked for them back ever since.</li>
-      <li><b>Metro museums.</b> Digging the metro before the 2004 Olympics turned up tens of thousands of ancient finds. Syntagma and Monastiraki stations display some of them for the price of a ticket.</li>
+      <li><b>השומרים בסינטגמה.</b> האבזונים שמול הפרלמנט מתחלפים בכל שעה, והטקס המלא נערך בימי ראשון ב־11:00. מספרים שבחצאית שלהם יש 400 קפלים, אחד לכל שנה של שלטון עות׳מאני, ושכל נעל שוקלת יותר מקילו.</li>
+      <li><b>המרתון.</b> המרוץ נקרא על שם השליח שלפי האגדה רץ משדה הקרב במרתון לאתונה בשנת 490 לפנה״ס, בישר על הניצחון ונפל מת. מרתון אתונה עדיין עובר באותו מסלול ומסתיים באצטדיון הפאן־אתונאי.</li>
+      <li><b>יומו האחרון של סוקרטס.</b> הוא נידון למוות בשנת 399 לפנה״ס על ״השחתת הנוער״, סירב להצעת חבריו לעזור לו לברוח ושתה את הרעל, כשהוא ממשיך להתווכח על פילוסופיה.</li>
+      <li><b>השיש החסר.</b> בסביבות 1801–1812 הסיר לורד אלגין כמחצית מפסלי הפרתנון ששרדו ומכר אותם למוזיאון הבריטי. יוון מבקשת אותם בחזרה מאז.</li>
+      <li><b>מוזיאונים במטרו.</b> בחפירות המטרו לפני אולימפיאדת 2004 התגלו עשרות אלפי ממצאים עתיקים. בתחנות סינטגמה ומונסטירקי מוצגים חלק מהם, במחיר כרטיס נסיעה.</li>
     </ul>
 
-    <h3>Athens with a toddler</h3>
+    <h3>אתונה עם פעוטה</h3>
     <ul>
-      <li><b>Carrier and stroller, both.</b> Pavements are narrow and broken, and the old town has steps. Use the stroller for museums, parks and the pedestrian streets; the carrier for the Acropolis, the hills and Plaka.</li>
-      <li><b>No strollers on the Acropolis.</b> You leave it at the entrance. Small children enter free.</li>
-      <li><b>The metro has lifts</b> at every station, and people readily give up seats for small children.</li>
-      <li><b>Taxis</b> do not carry child seats. Book a transfer with a seat for the airport and for longer drives.</li>
-      <li><b>Where she can run:</b> the National Garden, the Ancient Agora, the Panathenaic Stadium track, the Niarchos park and the pedestrian street around the Acropolis.</li>
-      <li><b>Eating out is easy.</b> Greeks adore small children and tavernas welcome them. Locals eat from 21:00, so at 18:00 or 19:00 you will have the place to yourselves.</li>
-      <li><b>Short winter days.</b> In November the sun sets a little after 17:00 and most ancient sites close around then, so do sights in the morning.</li>
-      <li><b>Changing tables</b> are reliable in the big museums and rare in tavernas.</li>
-      <li>Pharmacies (green cross) are everywhere and sell nappies, formula and baby food.</li>
+      <li><b>גם מנשא וגם עגלה.</b> המדרכות צרות ושבורות, ובעיר העתיקה יש מדרגות. העגלה מתאימה למוזיאונים, לפארקים ולמדרחובים; המנשא לאקרופוליס, לגבעות ולפלאקה.</li>
+      <li><b>אין כניסה לעגלות באקרופוליס.</b> משאירים אותן בכניסה. ילדים קטנים נכנסים בחינם.</li>
+      <li><b>במטרו יש מעליות</b> בכל תחנה, ואנשים מפנים מקום בשמחה לילדים קטנים.</li>
+      <li><b>במוניות</b> אין כיסאות בטיחות. הזמינו הסעה עם כיסא לשדה התעופה ולנסיעות ארוכות.</li>
+      <li><b>איפה אפשר לרוץ:</b> בגן הלאומי, באגורה העתיקה, על המסלול באצטדיון הפאן־אתונאי, בפארק ניארכוס ובמדרחוב שמקיף את האקרופוליס.</li>
+      <li><b>קל לאכול בחוץ.</b> היוונים מתים על ילדים קטנים, ובטברנות מקבלים אותם בחום. המקומיים אוכלים מ־21:00, כך שב־18:00 או ב־19:00 המקום יהיה כולו שלכם.</li>
+      <li><b>ימי חורף קצרים.</b> בנובמבר השמש שוקעת קצת אחרי 17:00 ורוב האתרים העתיקים נסגרים בסביבות השעה הזאת, אז את האתרים עושים בבוקר.</li>
+      <li><b>משטחי החתלה</b> יש במוזיאונים הגדולים, וכמעט שאין בטברנות.</li>
+      <li>בתי מרקחת (צלב ירוק) נמצאים בכל פינה ומוכרים חיתולים, תמ״ל ומזון לתינוקות.</li>
     </ul>
 
-    <h3>The places and their stories</h3>
+    <h3>המקומות והסיפורים שלהם</h3>
     <div id="stories"></div>
 
-    <h3>Good to know</h3>
+    <h3>טוב לדעת</h3>
     <ul>
-      <li><b>17 November</b> is the anniversary of the Polytechnic uprising: expect a large march in the centre, closed metro stations and some closed sights that afternoon.</li>
-      <li>The Acropolis uses timed tickets. Book online and go at opening time or late afternoon.</li>
-      <li>Ancient marble is polished and slippery, even when dry. Wear shoes with grip.</li>
-      <li>Toilet paper goes in the bin, not the toilet. The pipes are narrow.</li>
-      <li>Tap water in Athens is fine to drink.</li>
-      <li>Athenians eat late: restaurants fill up from 21:00.</li>
-      <li>"Yes" is <i>ne</i> and "no" is <i>ochi</i>. Thank you is <i>efcharisto</i>.</li>
-      <li>Don't hold up an open palm towards someone; it is a rude gesture here.</li>
-      <li>Watch your pockets on the metro and around Monastiraki.</li>
-      <li>Emergency number: 112.</li>
+      <li><b>17 בנובמבר</b> הוא יום השנה למרד הפוליטכניון: צפו לצעדה גדולה במרכז, לתחנות מטרו סגורות ולאתרים שנסגרים באותו אחר צהריים.</li>
+      <li>לאקרופוליס נכנסים עם כרטיס לשעה קבועה. הזמינו באינטרנט ובואו עם הפתיחה או אחר הצהריים המאוחר.</li>
+      <li>השיש העתיק מלוטש וחלקלק, גם כשהוא יבש. נעלו נעליים עם אחיזה.</li>
+      <li>נייר טואלט זורקים לפח, לא לאסלה. הצנרת צרה.</li>
+      <li>מי הברז באתונה טובים לשתייה.</li>
+      <li>האתונאים אוכלים מאוחר: המסעדות מתמלאות מ־21:00.</li>
+      <li>״כן״ זה <i>נֶה</i> ו״לא״ זה <i>אוֹחי</i>. תודה: <i>אֶפחריסטוֹ</i>.</li>
+      <li>אל תרימו כף יד פתוחה מול מישהו; כאן זו תנועה מעליבה.</li>
+      <li>שמרו על הכיסים במטרו ובאזור מונסטירקי.</li>
+      <li>מספר חירום: 112.</li>
     </ul>
   </div>
 </div>
 <nav id="tabs">
-  <button data-tab="map" class="on">Map</button>
-  <button data-tab="days">Trip</button>
-  <button data-tab="guide">Guide</button>
+  <button data-tab="map" class="on">מפה</button>
+  <button data-tab="days">הטיול</button>
+  <button data-tab="guide">מדריך</button>
 </nav>
 <button id="locate" title="Where am I?" aria-label="Show my location">◎</button>
 
@@ -239,6 +240,16 @@ const CAT_COLORS = {
 };
 const color = cat => CAT_COLORS[cat] || '#666';
 const LABELS = { friend: 'Friends', general: 'General' };
+
+// The Trip and Guide tabs are in Hebrew; the map keeps the places' own names and English labels.
+const CAT_HE = { 'Food': 'אוכל', 'Bars': 'ברים', 'Cafes & Sweets': 'קפה ומתוקים', 'Museums': 'מוזיאונים', 'Sights': 'אתרים', 'Views': 'תצפיות', 'Parks': 'פארקים' };
+const TYPE_HE = {
+  'Taverna': 'טברנה', 'Deli & meze restaurant': 'מעדנייה ומסעדת מזה', 'Greek restaurant': 'מסעדה יוונית', 'Greek taverna': 'טברנה יוונית',
+  'Restaurant': 'מסעדה', 'Vegan restaurant': 'מסעדה טבעונית', 'Street food': 'אוכל רחוב', 'Rooftop bar': 'בר גג', 'Bar & restaurant': 'בר ומסעדה',
+  'Rooftop restaurant & bar': 'מסעדה ובר על הגג', 'Cocktail bar': 'בר קוקטיילים', 'Bar': 'בר', 'Pastry shop': 'קונדיטוריה', 'Dessert shop': 'חנות קינוחים',
+  'Cafe & patisserie': 'בית קפה וקונדיטוריה', 'Cafe': 'בית קפה', 'Bakery': 'מאפייה'
+};
+const typeHe = p => TYPE_HE[p.type] || CAT_HE[p.category] || p.type || p.category;
 
 const map = L.map('map', { zoomControl: false }).setView([37.9755, 23.7300], 14);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -403,7 +414,7 @@ document.addEventListener('click', e => {
 });
 
 const dotHtml = p => `<span class="dot ${p.source === 'friend' ? 'friend' : ''}" style="background:${color(p.category)}"></span>`;
-const mapLink = name => `<button class="maplink" data-place="${esc(name)}">Show on map</button>`;
+const mapLink = name => `<button class="maplink" data-place="${esc(name)}">הצג במפה</button>`;
 
 function buildDays(days, places) {
   const byName = Object.fromEntries(places.map(p => [p.name, p]));
@@ -417,7 +428,7 @@ function buildDays(days, places) {
         ${p ? `<div class="pname">${dotHtml(p)}${esc(p.name)}</div>` : ''}${esc(st.text)}
         ${p ? `<div>${mapLink(p.name)}</div>` : ''}</div></div>`;
     }
-    if (d.tips && d.tips.length) html += `<div class="tips"><b>Keep in mind</b><ul>${d.tips.map(t => `<li>${esc(t)}</li>`).join('')}</ul></div>`;
+    if (d.tips && d.tips.length) html += `<div class="tips"><b>כדאי לזכור</b><ul>${d.tips.map(t => `<li>${esc(t)}</li>`).join('')}</ul></div>`;
     html += '</div></details>';
   }
   document.getElementById('days').innerHTML = html;
@@ -426,11 +437,11 @@ function buildDays(days, places) {
 // Live status opens in a Google search for the flight, which shows delays, gates and cancellations.
 function buildFlights(flights) {
   const el = document.getElementById('flights');
-  if (!flights.length) { el.innerHTML = '<div class="empty">No flights added yet.</div>'; return; }
+  if (!flights.length) { el.innerHTML = '<div class="empty">עדיין לא נוספו טיסות.</div>'; return; }
   el.innerHTML = flights.map(f => `<div class="flight">
-    <div class="t">${esc(f.number)} · ${esc(f.from)} → ${esc(f.to)}</div>
+    <div class="t">${esc(f.number)} · ${esc(f.from)} ← ${esc(f.to)}</div>
     <div class="s">${esc([f.date, f.time].filter(Boolean).join(' · '))}</div>
-    <a href="https://www.google.com/search?q=${encodeURIComponent(f.number + ' flight status')}" target="_blank" rel="noopener">Check live status</a>
+    <a href="https://www.google.com/search?q=${encodeURIComponent(f.number + ' flight status')}" target="_blank" rel="noopener">בדיקת סטטוס הטיסה</a>
   </div>`).join('');
 }
 
@@ -444,22 +455,22 @@ function buildToday(days, places) {
   const cat = c => places.filter(p => p.category === c);
   const place = (label, p) => p ? `<div class="row"><div class="label">${label}</div>
     <div class="name">${dotHtml(p)}${esc(p.name)}</div>
-    <div class="text">${esc(p.type || p.category)}${p.rating ? ' · ★ ' + p.rating : ''}${p.source === 'friend' ? ' · ' + (p.by ? 'recommended by ' + esc(p.by) : "friend's pick") : ''}</div>
+    <div class="text">${esc(typeHe(p))}${p.rating ? ' · ★ ' + p.rating : ''}${p.source === 'friend' ? ' · ' + (p.by ? 'המלצה של ' + esc(p.by) : 'המלצה של חברים') : ''}</div>
     ${mapLink(p.name)}</div>` : '';
-  const cityDays = days.filter(d => d.where === 'In the city');
+  const cityDays = days.filter(d => d.city);
   const day = pick(cityDays, 1);
   const story = pick(places.filter(p => p.story), 5);
   document.getElementById('today').innerHTML = `<div class="sug">
-    <div class="row"><div class="label">Plan for the day</div>
+    <div class="row"><div class="label">התוכנית להיום</div>
       <div class="name">${esc(day.title)}</div><div class="text">${esc(day.summary)}</div>
-      <button class="maplink" id="openDay" data-day="${days.indexOf(day)}">See the plan</button></div>
-    ${place('Lunch or dinner', pick(cat('Food'), 3))}
-    ${place('Something sweet', pick(cat('Cafes & Sweets'), 1))}
-    ${place('An evening drink', pick(cat('Bars'), 1))}
-    <div class="row"><div class="label">Story of the day</div>
+      <button class="maplink" id="openDay" data-day="${days.indexOf(day)}">לתוכנית המלאה</button></div>
+    ${place('צהריים או ערב', pick(cat('Food'), 3))}
+    ${place('משהו מתוק', pick(cat('Cafes & Sweets'), 1))}
+    ${place('משקה של ערב', pick(cat('Bars'), 1))}
+    <div class="row"><div class="label">הסיפור היומי</div>
       <div class="name">${dotHtml(story)}${esc(story.name)}</div><div class="text">${esc(story.story)}</div>
       ${mapLink(story.name)}</div>
-  </div><button id="another">Show me another</button>`;
+  </div><button id="another">הצעה אחרת</button>`;
   document.getElementById('another').onclick = () => { sugOffset++; buildToday(days, places); };
   document.getElementById('openDay').onclick = e => {
     const card = document.querySelectorAll('#days details')[e.target.dataset.day];
@@ -474,7 +485,7 @@ function buildStories(places) {
     .sort((a, b) => known.indexOf(a.category) - known.indexOf(b.category));
   let html = '', group = '';
   for (const p of withStory) {
-    if (p.category !== group) { group = p.category; html += `<div class="group">${esc(group)}</div>`; }
+    if (p.category !== group) { group = p.category; html += `<div class="group">${esc(CAT_HE[group] || group)}</div>`; }
     html += `<details class="card"><summary><div class="t">${dotHtml(p)}${esc(p.name)}</div></summary>
       <div class="body"><p class="story">${esc(p.story)}</p>${mapLink(p.name)}</div></details>`;
   }

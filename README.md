@@ -20,8 +20,10 @@ Add an entry to `places.json`:
 
 ## Tabs
 
+The map is in English; the Trip and Guide tabs, `days.json` and the `story` texts are in Hebrew (right-to-left).
+
 - **Map** – the pins, filters and search.
-- **Trip** – flights from `flights.json` (each `{ "number": "A3 929", "date": "...", "time": "...", "from": "...", "to": "..." }`, with a live-status link) and proposed days from `days.json`. Each day has `title`, `where` (the group heading), `summary`, `stops` (`time`, `text`, and optionally `place`, the exact name of a pin to link to) and `tips`.
+- **Trip** – flights from `flights.json` (each `{ "number": "A3 929", "date": "...", "time": "...", "from": "...", "to": "..." }`, with a live-status link) and proposed days from `days.json`. Each day has `title`, `where` (the group heading), `city` (true for days in Athens itself), `summary`, `stops` (`time`, `text`, and optionally `place`, the exact name of a pin to link to) and `tips`.
 - **Guide** – history and practical notes (plain HTML in `index.html`), plus every pin that has a `story`.
 
 ## Run locally
