@@ -112,6 +112,13 @@
   .flight .t { font-size: 16px; font-weight: 700; }
   .flight .s { font-size: 14px; color: #555; margin: 3px 0 8px; }
   .flight a { display: inline-block; background: #1a73e8; color: #fff; text-decoration: none; padding: 7px 12px; border-radius: 6px; font-size: 14px; }
+  .sug { border: 1px solid #ddd; border-radius: 12px; padding: 4px 14px; }
+  .sug .row { padding: 10px 0; border-top: 1px solid #eee; }
+  .sug .row:first-child { border-top: none; }
+  .sug .label { font-size: 12px; font-weight: 700; color: #777; text-transform: uppercase; letter-spacing: .05em; }
+  .sug .name { font-size: 16px; font-weight: 700; display: flex; align-items: center; gap: 7px; margin-top: 2px; }
+  .sug .text { font-size: 14px; color: #555; line-height: 1.45; margin-top: 2px; }
+  #another { margin-top: 10px; border: 1px solid #ccc; background: #fff; color: #333; border-radius: 999px; padding: 8px 14px; font-size: 14px; cursor: pointer; font-family: inherit; }
   .empty { font-size: 14px; color: #777; border: 1px dashed #ccc; border-radius: 12px; padding: 12px 14px; }
   .popup .by { font-weight: 600; color: #111; }
   .popup p { margin: 0 0 8px; font-size: 14px; }
@@ -142,6 +149,8 @@
     <h2>Trip</h2>
     <h3>Flights</h3>
     <div id="flights"></div>
+    <h3>Today's suggestions</h3>
+    <div id="today"></div>
     <h3>Day plans</h3>
     <p class="lead">Ideas for full days, planned for travelling with a toddler: sights in the morning, a midday nap on the move, a short afternoon. Pick the ones you like; the order does not matter.</p>
     <div id="days"></div>
@@ -365,7 +374,7 @@ fetch('places.json', { cache: 'no-cache' }).then(r => r.json()).then(places => {
   applyFilters();
   buildStories(places);
   fetch('flights.json', { cache: 'no-cache' }).then(r => r.json()).then(buildFlights);
-  return fetch('days.json', { cache: 'no-cache' }).then(r => r.json()).then(days => buildDays(days, places));
+  return fetch('days.json', { cache: 'no-cache' }).then(r => r.json()).then(days => { buildDays(days, places); buildToday(days, places); });
 });
 
 // ---- Tabs
@@ -423,6 +432,40 @@ function buildFlights(flights) {
     <div class="s">${esc([f.date, f.time].filter(Boolean).join(' · '))}</div>
     <a href="https://www.google.com/search?q=${encodeURIComponent(f.number + ' flight status')}" target="_blank" rel="noopener">Check live status</a>
   </div>`).join('');
+}
+
+// A different set of suggestions each day: one plan, places to eat and drink, and a story.
+// The pick depends only on the date, so it stays the same all day; "Show me another" moves on.
+let sugOffset = 0;
+function buildToday(days, places) {
+  const now = new Date();
+  const n = Math.floor((now.getTime() - now.getTimezoneOffset() * 60000) / 86400000) + sugOffset;
+  const pick = (list, step) => list[(n * step) % list.length];
+  const cat = c => places.filter(p => p.category === c);
+  const place = (label, p) => p ? `<div class="row"><div class="label">${label}</div>
+    <div class="name">${dotHtml(p)}${esc(p.name)}</div>
+    <div class="text">${esc(p.type || p.category)}${p.rating ? ' · ★ ' + p.rating : ''}${p.source === 'friend' ? ' · ' + (p.by ? 'recommended by ' + esc(p.by) : "friend's pick") : ''}</div>
+    ${mapLink(p.name)}</div>` : '';
+  const cityDays = days.filter(d => d.where === 'In the city');
+  const day = pick(cityDays, 1);
+  const story = pick(places.filter(p => p.story), 5);
+  document.getElementById('today').innerHTML = `<div class="sug">
+    <div class="row"><div class="label">Plan for the day</div>
+      <div class="name">${esc(day.title)}</div><div class="text">${esc(day.summary)}</div>
+      <button class="maplink" id="openDay" data-day="${days.indexOf(day)}">See the plan</button></div>
+    ${place('Lunch or dinner', pick(cat('Food'), 3))}
+    ${place('Something sweet', pick(cat('Cafes & Sweets'), 1))}
+    ${place('An evening drink', pick(cat('Bars'), 1))}
+    <div class="row"><div class="label">Story of the day</div>
+      <div class="name">${dotHtml(story)}${esc(story.name)}</div><div class="text">${esc(story.story)}</div>
+      ${mapLink(story.name)}</div>
+  </div><button id="another">Show me another</button>`;
+  document.getElementById('another').onclick = () => { sugOffset++; buildToday(days, places); };
+  document.getElementById('openDay').onclick = e => {
+    const card = document.querySelectorAll('#days details')[e.target.dataset.day];
+    card.open = true;
+    card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
 }
 
 function buildStories(places) {
