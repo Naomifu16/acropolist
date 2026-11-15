@@ -1,0 +1,283 @@
+[
+ {
+  "title": "The Acropolis morning",
+  "where": "In the city",
+  "summary": "The one unmissable sight, done early while everyone is fresh, then an easy afternoon on car-free streets.",
+  "stops": [
+   {
+    "time": "8:00",
+    "place": "Acropolis of Athens",
+    "text": "Be at the gate for opening: fewer people and cooler. Strollers are not allowed on the rock, so take a baby carrier. Allow 1.5 hours."
+   },
+   {
+    "time": "10:00",
+    "place": "Alchemist Cafe Patisserie",
+    "text": "Coffee and a snack right below the Acropolis."
+   },
+   {
+    "time": "10:45",
+    "place": "Acropolis Museum",
+    "text": "Flat floors and lifts, so the stroller works here. An hour is enough: the Caryatids and the top-floor Parthenon gallery."
+   },
+   {
+    "time": "12:15",
+    "place": "Liondi Traditional Greek Restaurant",
+    "text": "Lunch nearby (or Arcadia or Yard, all on the same street)."
+   },
+   {
+    "time": "13:30",
+    "text": "Nap walk: push the stroller along the wide pedestrian street around the Acropolis (Dionysiou Areopagitou, then Apostolou Pavlou) towards Thissio."
+   },
+   {
+    "time": "15:30",
+    "place": "Philopappos Hill",
+    "text": "The lower stone paths are shady and car-free, good for a toddler to walk. The summit is a short climb, easier with the carrier."
+   }
+  ],
+  "tips": [
+   "If she walks on the Acropolis, hold her hand: the marble is polished and there are drops without railings.",
+   "There is no shade or food on the rock. Bring water and a hat."
+  ]
+ },
+ {
+  "title": "Ancient Agora and the old town",
+  "where": "In the city",
+  "summary": "Ruins with grass and room to run, then the liveliest square in Athens.",
+  "stops": [
+   {
+    "time": "9:00",
+    "place": "Ancient Agora of Athens",
+    "text": "A big green site with gravel paths where she can roam safely. The rebuilt Stoa of Attalos has a small museum and shade."
+   },
+   {
+    "time": "10:15",
+    "place": "Temple of Hephaestus",
+    "text": "Inside the same site, up a gentle path. The best-preserved Greek temple there is."
+   },
+   {
+    "time": "11:15",
+    "place": "Monastiraki Square",
+    "text": "Street musicians, fruit stalls and the flea market lanes. Busy: keep her in the stroller or carrier here."
+   },
+   {
+    "time": "12:15",
+    "place": "Maiandros Restaurant",
+    "text": "Lunch a minute from the square (Efcharis is next door). Feyrouz is a good quick alternative for savoury pies."
+   },
+   {
+    "time": "13:30",
+    "text": "Nap walk through Plaka's quieter lanes. Expect some steps and cobbles; the carrier is easier than the stroller in upper Plaka."
+   },
+   {
+    "time": "15:30",
+    "place": "Roman Agora",
+    "text": "Small and quick. The Tower of the Winds is the highlight and can be seen well from the fence if you would rather not go in."
+   },
+   {
+    "time": "16:15",
+    "place": "Koukouvaya Desserts",
+    "text": "Something sweet to finish."
+   }
+  ],
+  "tips": [
+   "Monastiraki is the main spot for pickpockets. Keep bags zipped and in front of you."
+  ]
+ },
+ {
+  "title": "Guards, garden and the marble stadium",
+  "where": "In the city",
+  "summary": "The most toddler-friendly day: soldiers, ducks, a playground and a running track.",
+  "stops": [
+   {
+    "time": "10:00",
+    "text": "Syntagma Square: the guards in front of Parliament change on the hour. On Sundays the full parade is at 11:00. The pigeons are a show of their own."
+   },
+   {
+    "time": "10:30",
+    "place": "Athens National Garden",
+    "text": "Enter beside Parliament. Shady, flat paths, a duck pond, turtles and a playground. Let her set the pace."
+   },
+   {
+    "time": "12:00",
+    "place": "Aspro Alogo",
+    "text": "Lunch close to the garden."
+   },
+   {
+    "time": "13:15",
+    "text": "Nap walk through the garden to the Zappeion hall and on towards the stadium."
+   },
+   {
+    "time": "15:00",
+    "place": "Panathenaic Stadium",
+    "text": "She can run on the track where the 1896 Olympics were held, and you can stand on the podium."
+   },
+   {
+    "time": "16:15",
+    "place": "Choureal - Choux & Profiterole",
+    "text": "Fresh profiteroles on the way back."
+   }
+  ],
+  "tips": [
+   "The garden closes at sunset.",
+   "The stadium's upper tiers are steep with no railings; stay at track level with her."
+  ]
+ },
+ {
+  "title": "Museums and the sunset hill",
+  "where": "In the city",
+  "summary": "A gentle indoor morning in Kolonaki, then the funicular up to the best view in Athens.",
+  "stops": [
+   {
+    "time": "10:00",
+    "place": "Kotsanas Museum of Ancient Greek Technology",
+    "text": "Hands-on machines and moving models, so more fun with a small child than glass cases. Or choose the Museum of Cycladic Art nearby."
+   },
+   {
+    "time": "11:30",
+    "place": "Benaki Museum",
+    "text": "Optional: skip the galleries and go straight to the rooftop cafe for lunch with a view over the garden."
+   },
+   {
+    "time": "13:00",
+    "text": "Nap in the stroller or back at your room."
+   },
+   {
+    "time": "15:45",
+    "place": "Lycabettus Hill",
+    "text": "Take a taxi to the funicular station in Kolonaki (the streets up to it are steep with many steps). Ride up for sunset over the Acropolis and the sea."
+   }
+  ],
+  "tips": [
+   "There are steps at the top of Lycabettus. Take the carrier, not the stroller.",
+   "In November the sun sets a little after 17:00, and it is windy and cooler at the top."
+  ]
+ },
+ {
+  "title": "Sea air at the Niarchos park",
+  "where": "In the city",
+  "summary": "A break from ruins: lawns, a big playground and a view of the sea, 15 minutes by taxi from the centre.",
+  "stops": [
+   {
+    "time": "10:00",
+    "place": "Stavros Niarchos Park",
+    "text": "Start at the playgrounds, then walk the gentle slope up to the top of the hill for the view: sea on one side, Acropolis on the other. Fully stroller-friendly."
+   },
+   {
+    "time": "12:00",
+    "text": "Lunch at one of the cafes in the centre, or bring a picnic for the lawn."
+   },
+   {
+    "time": "13:00",
+    "text": "Nap in the stroller along the canal, or head back."
+   },
+   {
+    "time": "15:00",
+    "text": "Optional: Flisvos Marina, 10 minutes further by taxi, has a seafront promenade, yachts to look at and another playground."
+   }
+  ],
+  "tips": [
+   "Good choice for the day after a long sightseeing day."
+  ]
+ },
+ {
+  "title": "Rainy day",
+  "where": "In the city",
+  "summary": "Keep this one in your pocket. November has some wet days.",
+  "stops": [
+   {
+    "time": "10:00",
+    "place": "National Archaeological Museum",
+    "text": "Huge and stroller-friendly. Pick three things rather than everything: the gold Mask of Agamemnon, the bronze Zeus or Poseidon, and the Antikythera mechanism."
+   },
+   {
+    "time": "12:15",
+    "place": "Atitamos",
+    "text": "Lunch a few minutes' walk away."
+   },
+   {
+    "time": "14:30",
+    "place": "Basil & Elise Goulandris Foundation",
+    "text": "After the nap: a calm, modern museum that takes about an hour. Van Gogh, Monet and Picasso."
+   }
+  ],
+  "tips": [
+   "The Acropolis Museum is the other good rainy-day option if you have not been yet."
+  ]
+ },
+ {
+  "title": "Cape Sounion and the coast",
+  "where": "Out of town",
+  "summary": "The Temple of Poseidon on a cliff above the sea, about 1.5 hours' drive along the coast. Half a day.",
+  "stops": [
+   {
+    "time": "13:00",
+    "text": "Leave after lunch so she naps in the car on the way. Go by rental car or a pre-booked taxi, and ask for a child seat in advance."
+   },
+   {
+    "time": "14:45",
+    "text": "Temple of Poseidon. A short walk from the car park on uneven ground. Lord Byron carved his name on one of the columns."
+   },
+   {
+    "time": "16:00",
+    "text": "Stay for the light before sunset, then drive back along the coast road."
+   }
+  ],
+  "tips": [
+   "It is very windy on the cape: bring a warm layer for her.",
+   "The cliffs are unfenced in places. Carrier or hand-holding the whole time."
+  ]
+ },
+ {
+  "title": "Aegina island",
+  "where": "Out of town",
+  "summary": "A real Greek island as a day trip: a harbour town, fishing boats and pistachios.",
+  "stops": [
+   {
+    "time": "9:00",
+    "text": "Ferry from Piraeus port (metro or taxi from the centre). The slower car ferry takes about 75 minutes and has decks and space for her to walk; the fast boat takes about 40 but you stay seated."
+   },
+   {
+    "time": "10:30",
+    "text": "Aegina town: walk the waterfront, watch the boats, buy pistachios, which the island is famous for."
+   },
+   {
+    "time": "12:30",
+    "text": "Fish lunch at the harbour."
+   },
+   {
+    "time": "14:00",
+    "text": "Optional: taxi to the Temple of Aphaia, a beautiful hilltop temple (about 25 minutes each way). Otherwise an easy afternoon in town."
+   },
+   {
+    "time": "16:00",
+    "text": "Ferry back."
+   }
+  ],
+  "tips": [
+   "Check the return ferry times when you arrive; there are fewer boats in winter.",
+   "Skip this one if the sea is rough."
+  ]
+ },
+ {
+  "title": "A day for her: the zoo",
+  "where": "Out of town",
+  "summary": "Attica Zoological Park, near the airport, about 40 minutes by taxi. Large, flat and made for small children.",
+  "stops": [
+   {
+    "time": "10:00",
+    "text": "Arrive at opening and start with the birds and the farm animals."
+   },
+   {
+    "time": "12:30",
+    "text": "Lunch at the zoo cafe."
+   },
+   {
+    "time": "13:30",
+    "text": "She will probably fall asleep in the stroller; finish the loop and head back."
+   }
+  ],
+  "tips": [
+   "Works well as a last-day plan if you have a late flight: it is 15 minutes from the airport."
+  ]
+ }
+]
