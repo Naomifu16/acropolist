@@ -246,7 +246,7 @@
   <button data-tab="guide">מדריך</button>
 </nav>
 <div id="route" lang="he">
-  <div class="grow"><div class="label">מסלול היום</div><div class="title" id="routeTitle"></div></div>
+  <div class="grow"><div class="label">מסלול היום<span id="routeInfo"></span></div><div class="title" id="routeTitle"></div></div>
   <button id="routeClose">חזרה לכל המקומות</button>
 </div>
 <button id="locate" title="Where am I?" aria-label="Show my location">◎</button>
@@ -451,7 +451,25 @@ function showRoute(index) {
   document.getElementById('routeTitle').textContent = day.title;
   const pad = document.getElementById('route').offsetHeight + 12;
   routeLayer = L.layerGroup().addTo(map);
-  L.polyline(pts.map(p => p.latlng), { color: '#111', weight: 3, opacity: .7, dashArray: '6 8' }).addTo(routeLayer);
+  // Straight dashed line first; in the city it is replaced by the real walking route once that loads.
+  const straight = L.polyline(pts.map(p => p.latlng), { color: '#111', weight: 3, opacity: .7, dashArray: '6 8' }).addTo(routeLayer);
+  const info = document.getElementById('routeInfo');
+  info.textContent = '';
+  if (day.city && pts.length > 1) {
+    const layer = routeLayer;
+    const coords = pts.map(p => p.latlng.lng + ',' + p.latlng.lat).join(';');
+    fetch('https://routing.openstreetmap.de/routed-foot/route/v1/foot/' + coords + '?overview=full&geometries=geojson')
+      .then(r => r.json())
+      .then(j => {
+        const route = j.routes && j.routes[0];
+        if (!route || routeLayer !== layer) return; // failed, or the route was closed meanwhile
+        straight.remove();
+        L.polyline(route.geometry.coordinates.map(c => [c[1], c[0]]), { color: '#1a73e8', weight: 5, opacity: .85 }).addTo(layer);
+        const km = route.distance / 1000;
+        info.textContent = ` · ${km < 10 ? km.toFixed(1) : Math.round(km)} ק״מ הליכה, כ־${Math.round(route.duration / 60)} דק׳`;
+      })
+      .catch(() => {}); // no connection or service down: the straight line stays
+  }
   pts.forEach((p, i) => {
     const url = p.url || 'https://www.google.com/maps/search/?api=1&query=' +
       (p.st.place ? encodeURIComponent(p.name + ', Athens') : p.latlng.lat + ',' + p.latlng.lng);
@@ -470,7 +488,7 @@ function showRoute(index) {
 }
 document.getElementById('routeClose').onclick = closeRoute;
 document.addEventListener('click', e => {
-  const b = e.target.closest('.routebtn');
+  const b = e.target.closest('.routebtn, .routebtn-s');
   if (b) showRoute(+b.dataset.day);
 });
 
@@ -542,7 +560,8 @@ function buildToday(days, places) {
   document.getElementById('today').innerHTML = `<div class="sug">
     <div class="row"><div class="label">התוכנית להיום</div>
       <div class="name">${esc(day.title)}</div><div class="text">${esc(day.summary)}</div>
-      <button class="maplink" id="openDay" data-day="${days.indexOf(day)}">לתוכנית המלאה</button></div>
+      <button class="maplink" id="openDay" data-day="${days.indexOf(day)}">לתוכנית המלאה</button>
+      <button class="maplink routebtn-s" data-day="${days.indexOf(day)}">הצג את המסלול במפה</button></div>
     ${place('צהריים או ערב', pick(cat('Food'), 3))}
     ${place('משהו מתוק', pick(cat('Cafes & Sweets'), 1))}
     ${place('משקה של ערב', pick(cat('Bars'), 1))}

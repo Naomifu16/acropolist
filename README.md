@@ -23,7 +23,7 @@ Add an entry to `places.json`:
 The map is in English; the Trip and Guide tabs, `days.json` and the `story` texts are in Hebrew (right-to-left).
 
 - **Map** – the pins, filters and search.
-- **Trip** – flights from `flights.json` (each `{ "number": "A3 929", "date": "...", "time": "...", "from": "...", "to": "..." }`, with a live-status link) and proposed days from `days.json`. Each day has `title`, `where` (the group heading), `city` (true for days in Athens itself), `summary`, `stops` (`time`, `text`, and either `place`, the exact name of a pin, or `at` + `lat` + `lng` for a stop that is not a pin; stops with a location appear on the day's route map) and `tips`.
+- **Trip** – flights from `flights.json` (each `{ "number": "A3 929", "date": "...", "time": "...", "from": "...", "to": "..." }`, with a live-status link) and proposed days from `days.json`. Each day has `title`, `where` (the group heading), `city` (true for days in Athens itself), `summary`, `stops` (`time`, `text`, and either `place`, the exact name of a pin, or `at` + `lat` + `lng` for a stop that is not a pin; stops with a location appear on the day's route map). For city days the route map draws the walking route between the stops using the public OpenStreetMap routing server (routing.openstreetmap.de); if that is unreachable it falls back to straight lines and `tips`.
 - **Guide** – history and practical notes (plain HTML in `index.html`), plus every pin that has a `story`.
 
 ## Run locally
