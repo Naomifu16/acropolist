@@ -128,6 +128,27 @@
     display: inline-block; background: #1a73e8; color: #fff; text-decoration: none;
     padding: 7px 12px; border-radius: 6px; font-size: 14px;
   }
+  .routebtn {
+    display: block; width: 100%; margin: 0 0 6px; border: none; background: #111; color: #fff;
+    border-radius: 10px; padding: 11px 14px; font-size: 15px; font-weight: 600; cursor: pointer; font-family: inherit;
+  }
+  .num {
+    width: 26px; height: 26px; border-radius: 50%; background: #111; color: #fff; border: 2px solid #fff;
+    box-shadow: 0 1px 4px rgba(0,0,0,.5); font: 700 13px/26px -apple-system, "Segoe UI", Roboto, sans-serif; text-align: center;
+  }
+  #route {
+    display: none; position: absolute; z-index: 1000; top: 0; left: 0; right: 0; direction: rtl;
+    padding: calc(10px + env(safe-area-inset-top)) 12px 10px; background: rgba(255,255,255,.95);
+    align-items: center; gap: 10px; box-shadow: 0 1px 4px rgba(0,0,0,.2);
+  }
+  #route .label { font-size: 12px; color: #777; }
+  #route .title { font-size: 16px; font-weight: 700; color: #111; }
+  #route .grow { flex: 1; min-width: 0; }
+  #routeClose { flex: none; border: 1px solid #ccc; background: #fff; color: #333; border-radius: 999px; padding: 8px 14px; font-size: 14px; cursor: pointer; font-family: inherit; }
+  body.route #route { display: flex; }
+  body.route #top { display: none; }
+  .popup.he { direction: rtl; text-align: right; }
+  .popup .steptime { font-size: 13px; font-weight: 700; color: #555; margin-bottom: 4px; }
   #locate {
     position: absolute; z-index: 1000; right: 12px; bottom: calc(var(--tabs) + 28px);
     width: 46px; height: 46px; border-radius: 50%; border: none; background: #fff;
@@ -224,6 +245,10 @@
   <button data-tab="days">הטיול</button>
   <button data-tab="guide">מדריך</button>
 </nav>
+<div id="route" lang="he">
+  <div class="grow"><div class="label">מסלול היום</div><div class="title" id="routeTitle"></div></div>
+  <button id="routeClose">חזרה לכל המקומות</button>
+</div>
 <button id="locate" title="Where am I?" aria-label="Show my location">◎</button>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
@@ -264,6 +289,7 @@ const icon = p => L.divIcon({
   html: `<div class="pin ${p.source === 'friend' ? 'friend' : ''}" style="background:${color(p.category)}"></div>`
 });
 
+let routeLayer = null;
 const state = { sources: new Set(['friend', 'general']), category: null, query: '' };
 let markers = [];
 
@@ -289,6 +315,7 @@ const matches = m => state.query
   : state.sources.has(m.place.source) && (!state.category || m.place.category === state.category);
 
 function applyFilters() {
+  if (routeLayer) return; // a day's route is on the map; the pins come back when it is closed
   for (const m of markers) {
     if (matches(m)) m.addTo(map); else m.remove();
   }
@@ -385,7 +412,7 @@ fetch('places.json', { cache: 'no-cache' }).then(r => r.json()).then(places => {
   applyFilters();
   buildStories(places);
   fetch('flights.json', { cache: 'no-cache' }).then(r => r.json()).then(buildFlights);
-  return fetch('days.json', { cache: 'no-cache' }).then(r => r.json()).then(days => { buildDays(days, places); buildToday(days, places); });
+  return fetch('days.json', { cache: 'no-cache' }).then(r => r.json()).then(days => { allDays = days; buildDays(days, places); buildToday(days, places); });
 });
 
 // ---- Tabs
@@ -397,10 +424,61 @@ function showTab(name) {
 }
 tabButtons.forEach(b => b.onclick = () => showTab(b.dataset.tab));
 
+// ---- A day plan on the map: only that day's stops, numbered in order and joined by a line.
+let allDays = [];
+function closeRoute() {
+  if (!routeLayer) return;
+  routeLayer.remove();
+  routeLayer = null;
+  document.body.classList.remove('route');
+  applyFilters();
+}
+function showRoute(index) {
+  const day = allDays[index];
+  closeRoute();
+  const pts = [];
+  for (const st of day.stops) {
+    const m = st.place && markers.find(x => x.place.name === st.place);
+    if (m) pts.push({ st, latlng: m.getLatLng(), name: m.place.name, url: m.place.url, story: m.place.story });
+    else if (st.lat) pts.push({ st, latlng: L.latLng(st.lat, st.lng), name: st.at });
+  }
+  if (!pts.length) return;
+  showTab('map');
+  results.style.display = 'none';
+  map.closePopup();
+  for (const m of markers) m.remove();
+  document.body.classList.add('route');
+  document.getElementById('routeTitle').textContent = day.title;
+  const pad = document.getElementById('route').offsetHeight + 12;
+  routeLayer = L.layerGroup().addTo(map);
+  L.polyline(pts.map(p => p.latlng), { color: '#111', weight: 3, opacity: .7, dashArray: '6 8' }).addTo(routeLayer);
+  pts.forEach((p, i) => {
+    const url = p.url || 'https://www.google.com/maps/search/?api=1&query=' +
+      (p.st.place ? encodeURIComponent(p.name + ', Athens') : p.latlng.lat + ',' + p.latlng.lng);
+    L.marker(p.latlng, {
+      icon: L.divIcon({ className: '', iconSize: [30, 30], iconAnchor: [15, 15], popupAnchor: [0, -16], html: `<div class="num">${i + 1}</div>` }),
+      zIndexOffset: 2000 - i
+    }).bindPopup(`<div class="popup he">
+      <div class="steptime">${i + 1} · ${esc(p.st.time)}</div>
+      <h3>${esc(p.name)}</h3>
+      <p>${esc(p.st.text)}</p>
+      <a class="go" href="${esc(url)}" target="_blank" rel="noopener">פתיחה בגוגל מפות</a>
+    </div>`, { maxWidth: 290, maxHeight: 300, autoPanPaddingTopLeft: [8, pad], autoPanPaddingBottomRight: [8, 8] }).addTo(routeLayer);
+  });
+  map.invalidateSize();
+  map.fitBounds(L.latLngBounds(pts.map(p => p.latlng)), { paddingTopLeft: [30, pad + 20], paddingBottomRight: [30, 30], maxZoom: 16, animate: false });
+}
+document.getElementById('routeClose').onclick = closeRoute;
+document.addEventListener('click', e => {
+  const b = e.target.closest('.routebtn');
+  if (b) showRoute(+b.dataset.day);
+});
+
 // Jump from a day plan or story to the place on the map.
 function showOnMap(name) {
   const m = markers.find(x => x.place.name === name);
   if (!m) return;
+  closeRoute();
   showTab('map');
   results.style.display = 'none';
   if (!matches(m)) { search.value = ''; onSearch(); }
@@ -422,6 +500,7 @@ function buildDays(days, places) {
   for (const d of days) {
     if (d.where !== group) { group = d.where; html += `<div class="group">${esc(group)}</div>`; }
     html += `<details class="card"><summary><div class="t">${esc(d.title)}</div><div class="s">${esc(d.summary)}</div></summary><div class="body">`;
+    html += `<button class="routebtn" data-day="${days.indexOf(d)}">הצג את מסלול היום במפה</button>`;
     for (const st of d.stops) {
       const p = st.place && byName[st.place];
       html += `<div class="stop"><div class="time">${esc(st.time)}</div><div class="what">
